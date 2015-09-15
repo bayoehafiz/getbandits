@@ -429,7 +429,7 @@ ul.slide-content-bandits .content-bandits {
     float: none!important;
 }
 
-#cd-cart .checkout-btn {
+#cd-cart .checkout-btn ,#btn-checkout{
     height: 47px!important;
     line-height: normal!important;
     font-size: 14px;
@@ -787,9 +787,9 @@ figure.effect-lexi:hover {
 }
 
 #form-preorder input{
-    background: #5F5E60;
+    background: #ECEAEA;
     border-color: rgba(95, 94, 96, 0.46);
-    color: #fff;
+    color: #000;
     height: 39px;
 }
 
@@ -804,7 +804,7 @@ figure.effect-lexi:hover {
 }
 
 #form-preorder input:focus{
-    color:#fff;
+    color:#000;
 }
 
 #form-preorder input:blur{

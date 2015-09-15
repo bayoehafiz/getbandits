@@ -32,25 +32,31 @@ $(function() {
             };
 
             if (index == 2 && direction == 'down') {
-                $('.btn-order-fixed button.btn-order').show();
-                $('.btn-order-fixed button.btn-contact-us').hide();
+                $('.btn-order-fixed button.btn-order').hide();
+                $('.btn-order-fixed button.btn-contact-us').show();
             };
-
-
-
+    
             if (index == 3 && direction == 'up') {
                 $('.btn-order-fixed button.btn-order').show();
                 $('.btn-order-fixed button.btn-contact-us').hide();
             }
+        }, 
+        afterLoad: function(anchorLink, index){
+            var loadedSection = $(this);
+
+            if (index == 3) {
+                $('.btn-order-fixed button.btn-order').hide();
+                $('.btn-order-fixed button.btn-contact-us').show();
+            };
         }
     });
 
     $('.slide-content-bandits').slick({
-        autoplay: false,
-        autoplaySpeed: 3000,
-        easing: 'easy-in',
-        dots: true,
-        dotsClass: 'slick-dots'
+            autoplay: true,
+            autoplaySpeed: 3000,
+            easing: 'easy-in',
+            dots: true,
+            dotsClass: 'slick-dots'
     });
 
     // Initiate qty spinner
