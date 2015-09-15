@@ -95,8 +95,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .social{
+        margin-top: 30px;
+    }
     .social .button-wrap{
         width: 100%;
+        padding: 1.5em 0 0;
     }
     #cd-cart .checkout-btn {
         position: relative;
@@ -142,6 +146,12 @@
     .faqs-btn {
         left: 0;
         right: 0;
+    }
+    .faqs-btn{
+        width: 50%!important;
+        position: fixed;
+        margin-left: auto;
+        margin-right: auto;
     }
     .contact-us-btn {
         display: none;
@@ -190,7 +200,7 @@
     .info-contact {
         width: 100%;
         font-size: 11px!important;
-        line-height: 1.4;
+        line-height: 1.4!important;
         text-align: left!important;
     }
     .office_box h5 {
@@ -199,7 +209,8 @@
     }
     .office_box p {
         font-size: 11px!important;
-        padding: 5px 0!important;
+        padding: 0!important;
+        line-height: 1.6;
     }
     .contact-us-btn,
     .submit-btn,
@@ -208,15 +219,7 @@
         font-size: 10px!important;
         border-radius: 4px;
     }
-    .office_box {
-        width: 50%;
-        float: left
-    }
-    .social {
-        width: 50%;
-        float: left;
-        margin-top: 0;
-    }
+    
     #somedialog .input-group textarea.form-control {
         min-height: 100px;
     }
@@ -312,7 +315,7 @@
         padding-top: 25px;
     }
     .intro p {
-        padding: 10px 0;
+        padding: 30px 0;
     }
     .logo {
         width: 75px;
@@ -722,6 +725,16 @@
     #fp-nav ul{
         display: none;
     }
+    .info-contact{
+        padding: 10px 0!important
+    }
+    .social {
+        margin-top: 20px;
+    }
+
+    .button-wrap{
+        padding: 1.5em 0 0!important;
+    }
 }
 
 
@@ -806,6 +819,21 @@
     }
     .button-wrap {
         padding: 1.5em 0 0!important;
+    }
+    .info-contact{
+        padding: 10px 0!important;
+    }
+
+    .office_box{
+        display: none;
+    }
+
+    .social{
+        margin-top: 5px
+    }
+
+    .social .button-wrap{
+        padding: 1em 0 0!important;
     }
 }
 

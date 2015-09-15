@@ -256,6 +256,7 @@ $(function() {
             }
             $('.cd-cart-total').fadeIn();
             $('#no-list').hide();
+            $('#currency_box, #form-preorder').fadeIn();
             // Chaeck if modal is opened
             if (modal.getState() == 'opened') {
                 $('#view-cart-link').fadeIn();
@@ -283,13 +284,6 @@ $(function() {
         }
     }
 
-    // Checkout button action
-    $('#btn-checkout').click(function() {
-        $.getq("TestConn", 'https://cf6f1cfc040292138f3fa2d751c7e35b:d2585d3d4a355bf0113dc5d96ab04bfa@getbandits-com.myshopify.com/admin/orders.json', function() {
-            alert('Coonection Succeeded...')
-        });
-    })
-
     // Adding product to cart
     function addToCart() {
         var aw = parseInt($('#white-amount').val());
@@ -313,6 +307,8 @@ $(function() {
                 $('#black-list').show();
                 $('#black-item').val(ab);
             }
+            $('#currency_box, #form-preorder').fadeIn();
+
             // adjusting checked radio button
             var sessCur = $.jStorage.get('cur');
             if (sessCur == 'USD') {
@@ -646,6 +642,49 @@ $(function() {
         location.reload(true);
     });
 
+    // PHP Ajax submit buttons
+    // Contact us submit button
+    var l = Ladda.create(document.querySelector('#btn-submit-desktop'));
+    // Send email handler
+    $('#btn-submit-desktop').click(function() {
+        var data = {
+            name: $("#form-name-desktop").val(),
+            email: $("#form-email-desktop").val(),
+            message: $("#form-message-desktop").val()
+        };
+        l.start();
+        $.ajax({
+            type: "POST",
+            url: "php/mailer/contact.php",
+            data: data,
+            success: function() {
+                $('#btn-submit-desktop').html('<i class="fa fa-paper-plane-o"></i> SENT!');
+                l.stop();
+            }
+        });
+    })
+    // Preorder checkout submit button
+    var m = Ladda.create(document.querySelector('#btn-checkout'));
+    // Send email handler
+    $('#btn-checkout').click(function() {
+        var data = {
+            name: $("#cart-name").val(),
+            email: $("#cart-email").val(),
+            white: $("#white-item").val(),
+            black: $("#black-item").val()
+        };
+        m.start();
+        $.ajax({
+            type: "POST",
+            url: "php/mailer/pre-order.php",
+            data: data,
+            success: function() {
+                $('#btn-checkout').html('<i class="fa fa-check-o"></i> THANK YOU FOR YOUR PRE-ORDER');
+                m.stop();
+            }
+        });
+    })
+
 
     // play button video function
     var video_url = $('.box-video-url iframe').attr('src');
@@ -677,9 +716,10 @@ $(function() {
 
     $('.view-cart-link').css('bottom', heightViewCartLink);
 
-
     // Window resize function
     $_window.resize(function() {
+        var desktop = $('#btn-contact-us-desktop');
+        var mobile = $('#btn-contact-us-mobile');
 
         if ($_window.width() <= 768) {
             $('.view-cart-link').css('bottom', '10px');
@@ -739,17 +779,12 @@ $(function() {
         })
     });
 
-
-
-    (function() {
-
+    /* (function() {
         var dlgtrigger = document.querySelector('[data-dialog]'),
             somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog')),
             dlg = new DialogFx(somedialog);
-
         dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-
-    })();
+    })(); */
 
     // initiate dummy cart reset
     resetInit();
