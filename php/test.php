@@ -6,4 +6,7 @@ if ($mysqli_connection->connect_error) {
 else {
    echo "Connected.";
 }
+
+echo "<br/><br/><br/>";
+phpinfo();
 ?>
