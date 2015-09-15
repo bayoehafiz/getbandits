@@ -4,21 +4,6 @@ if($_POST){
 
     try {
         $mandrill = new Mandrill('5O8bMd9RhEd7hrcSNqFfFg');
-        $template_name = 'get-bandits-contact-us';
-        $template_content = array(
-            array(
-                'name' => 'name',
-                'content' => $_POST['name']
-            ),
-            array(
-                'name' => 'email',
-                'content' => $_POST['email']
-            ),
-            array(
-                'name' => 'message',
-                'content' => $_POST['message']
-            )
-        );
         $message = array(
             'html' => $_POST['message'],
             'subject' => 'New message from GetBandits.com visitor',
@@ -41,13 +26,13 @@ if($_POST){
             'url_strip_qs' => null,
             'preserve_recipients' => null,
             'view_content_link' => null,
-            'bcc_address' => 'bayu@colorblindlabs.com',
+            'bcc_address' => 'admin@getbandits.com',
             'tracking_domain' => null,
             'signing_domain' => null,
             'return_path_domain' => null
         );
         $async = false;
-        $result = $mandrill->messages->sendTemplate($template_name, $template_content, $message, $async);
+        $result = $mandrill->messages->send($message, $async);
         print_r($result);
 
     } catch(Mandrill_Error $e) {

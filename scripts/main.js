@@ -35,13 +35,13 @@ $(function() {
                 $('.btn-order-fixed button.btn-order').hide();
                 $('.btn-order-fixed button.btn-contact-us').show();
             };
-    
+
             if (index == 3 && direction == 'up') {
                 $('.btn-order-fixed button.btn-order').show();
                 $('.btn-order-fixed button.btn-contact-us').hide();
             }
-        }, 
-        afterLoad: function(anchorLink, index){
+        },
+        afterLoad: function(anchorLink, index) {
             var loadedSection = $(this);
 
             if (index == 3) {
@@ -52,11 +52,11 @@ $(function() {
     });
 
     $('.slide-content-bandits').slick({
-            autoplay: true,
-            autoplaySpeed: 3000,
-            easing: 'easy-in',
-            dots: true,
-            dotsClass: 'slick-dots'
+        autoplay: true,
+        autoplaySpeed: 3000,
+        easing: 'easy-in',
+        dots: true,
+        dotsClass: 'slick-dots'
     });
 
     // Initiate qty spinner
@@ -666,7 +666,7 @@ $(function() {
             })
             .done(function(data) {
                 // show the response
-                alert(data);
+                //alert(data);
                 $('#btn-submit-desktop').html('<i class="fa fa-check-o"></i> SENT!');
                 l.stop();
 
@@ -675,7 +675,7 @@ $(function() {
                 $('#btn-submit-desktop').html('<i class="fa fa-circle-o"></i> FAILED!');
                 l.stop();
                 // just in case posting your form failed
-                alert("Posting failed.");
+                //alert("Posting failed.");
 
             });
         // to prevent refreshing the whole page page
@@ -688,20 +688,27 @@ $(function() {
         var data = {
             name: $("#cart-name").val(),
             email: $("#cart-email").val(),
+            city: $("#cart-city").val(),
             white: $("#white-item").val(),
             black: $("#black-item").val()
         };
         m.start();
         $.ajax({
-            type: "POST",
-            url: "pre-order.php",
-            data: data,
-            success: function() {
-                $('#btn-checkout').html('<i class="fa fa-check-o"></i> THANK YOU FOR YOUR PRE-ORDER');
-                m.stop();
-            }
-        });
-    })
+                type: "POST",
+                url: "pre-order.php",
+                data: data
+            })
+            .done(function(data) {
+                alert(data);
+                $('#btn-checkout').html('<i class="fa fa-check-o"></i> THANK YOU FOR YOUR PREORDER!');
+                l.stop();
+            })
+            .fail(function(data) {
+                alert(data);
+                $('#btn-checkout').html('<i class="fa fa-circle-o"></i> FAILED!');
+                l.stop();
+            });
+    });
 
 
     // play button video function
