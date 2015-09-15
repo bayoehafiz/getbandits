@@ -718,6 +718,8 @@ $(function() {
 
     // Window resize function
     $_window.resize(function() {
+        var desktop = $('#btn-contact-us-desktop');
+        var mobile = $('#btn-contact-us-mobile');
 
         if ($_window.width() <= 768) {
             $('.view-cart-link').css('bottom', '10px');
