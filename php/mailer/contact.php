@@ -11,7 +11,7 @@ if($_POST){
 
     //To address and name
     //$mail->addAddress("recepient1@example.com", "Recepient Name");
-    $mail->addAddress("qwerty@rhyta.com"); //Recipient name is optional
+    $mail->addAddress("bayu.hafiz@gmail.com"); //Recipient name is optional
 
     //Address to which recipient will reply
     $mail->addReplyTo($_POST['email'], "Reply");
