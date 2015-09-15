@@ -1,4 +1,9 @@
 @media screen and (min-width: 768px) {
+    .social .button-wrap{
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .btn-order-slide2 {
         position: absolute!important;
         bottom: 87px!important
@@ -90,7 +95,9 @@
 }
 
 @media screen and (max-width: 768px) {
-<<<<<<< HEAD
+    .social .button-wrap{
+        width: 100%;
+    }
     #cd-cart .checkout-btn {
         position: relative;
     }
@@ -98,10 +105,10 @@
         display: none!important;
     }
     .slide-content-bandits .bg-content {
-    .btn-order-slide2{
-        display: none!important;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .slide-content-bandits .bg-content{
     .slide-content-bandits h2 {
         font-size: 21px;
     }
@@ -688,8 +695,7 @@
         padding-top: 0px!important;
     }
     #cd-cart .checkout-btn {
-        position: relative;
-        bottom: 0px;
+        bottom: 20px;
     }
     .cart.open-modal {
         top: 44px;
@@ -719,6 +725,7 @@
 
 
 /* ----------- iPhone 5 and 5S ----------- */
+
 
 /* Portrait and Landscape */
 
