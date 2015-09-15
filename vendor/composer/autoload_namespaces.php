@@ -6,4 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Mandrill\\Tests' => array($vendorDir . '/jlinn/mandrill-api-php/tests'),
+    'Mandrill' => array($vendorDir . '/jlinn/mandrill-api-php/src'),
+    'Guzzle\\Tests' => array($vendorDir . '/guzzle/guzzle/tests'),
+    'Guzzle' => array($vendorDir . '/guzzle/guzzle/src'),
 );

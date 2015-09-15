@@ -8,6 +8,7 @@
         }
     ],
     "require": {
-        "phpmailer/phpmailer": "^5.2"
+        "phpmailer/phpmailer": "^5.2",
+        "jlinn/mandrill-api-php": "~1.0"
     }
 }
