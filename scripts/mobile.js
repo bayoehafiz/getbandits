@@ -32,7 +32,7 @@ $(function() {
     });
 
     $('.slide-content-bandits').slick({
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 3000,
             easing: 'easy-in',
             dots: true,
