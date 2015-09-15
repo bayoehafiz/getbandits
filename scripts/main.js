@@ -46,7 +46,11 @@ $(function() {
     });
 
     $('.slide-content-bandits').slick({
+<<<<<<< HEAD
+            autoplay: false,
+=======
             autoplay: true,
+>>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
             autoplaySpeed: 3000,
             easing: 'easy-in',
             dots: true,
@@ -255,7 +259,10 @@ $(function() {
                 $('#cd-cart-trigger').addClass('items-added').find('span').html(t);
             }
             $('.cd-cart-total').fadeIn();
+<<<<<<< HEAD
+=======
             $('#form-preorder, #cart-cur-switcher').fadeIn();
+>>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
             $('#no-list').hide();
             // Chaeck if modal is opened
             if (modal.getState() == 'opened') {
