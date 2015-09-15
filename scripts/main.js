@@ -18,7 +18,7 @@ $(function() {
     $('#fullpage').fullpage({
         menu: '#menu',
         sectionsColor: ['#000', '#000', '#000'],
-        anchors: ['home', 'product1','contact'],
+        anchors: ['home', 'product1', 'contact'],
         navigation: true,
         autoScrolling: true,
         scrollingSpeed: 1000,
@@ -36,7 +36,7 @@ $(function() {
                 $('.btn-order-fixed button.btn-contact-us').hide();
             };
 
-    
+
 
             if (index == 3 && direction == 'up') {
                 $('.btn-order-fixed button.btn-order').show();
@@ -46,13 +46,13 @@ $(function() {
     });
 
     $('.slide-content-bandits').slick({
-            autoplay: false,
-            autoplaySpeed: 3000,
-            easing: 'easy-in',
-            dots: true,
-            dotsClass: 'slick-dots'
+        autoplay: false,
+        autoplaySpeed: 3000,
+        easing: 'easy-in',
+        dots: true,
+        dotsClass: 'slick-dots'
     });
-    
+
     // Initiate qty spinner
     (function($) {
         $.fn.spinner = function() {
@@ -654,15 +654,27 @@ $(function() {
         };
         l.start();
         $.ajax({
-            type: "POST",
-            url: "php/mailer/contact.php",
-            data: data,
-            success: function() {
-                $('#btn-submit-desktop').html('<i class="fa fa-paper-plane-o"></i> SENT!');
+                type: "POST",
+                url: "contact.php",
+                data: data
+            })
+            .done(function(data) {
+                // show the response
+                alert(data);
+                $('#btn-submit-desktop').html('<i class="fa fa-check-o"></i> SENT!');
                 l.stop();
-            }
-        });
-    })
+
+            })
+            .fail(function() {
+                $('#btn-submit-desktop').html('<i class="fa fa-circle-o"></i> FAILED!');
+                l.stop();
+                // just in case posting your form failed
+                alert("Posting failed.");
+
+            });
+        // to prevent refreshing the whole page page
+        return false;
+    });
     // Preorder checkout submit button
     var m = Ladda.create(document.querySelector('#btn-checkout'));
     // Send email handler
@@ -676,7 +688,7 @@ $(function() {
         m.start();
         $.ajax({
             type: "POST",
-            url: "php/mailer/pre-order.php",
+            url: "pre-order.php",
             data: data,
             success: function() {
                 $('#btn-checkout').html('<i class="fa fa-check-o"></i> THANK YOU FOR YOUR PRE-ORDER');
@@ -744,35 +756,35 @@ $(function() {
 
 
             resize_function("560px");
-            
+
         }
 
         // trigger button click
-        $('#btn-contact-us-desktop').click(function(){
+        $('#btn-contact-us-desktop').click(function() {
             $('#contact-us-desktop').addClass('dialog--open');
         })
-        $('#btn-contact-us-mobile').click(function(){
+        $('#btn-contact-us-mobile').click(function() {
             $('#contact-us-mobile').addClass('dialog--open');
         })
 
-        $('#contact-us-desktop > div.dialog__overlay').click(function(){
+        $('#contact-us-desktop > div.dialog__overlay').click(function() {
             var modal = $('#contact-us-desktop');
             if (modal.hasClass('dialog--open')) {
                 modal.removeClass('dialog--open');
                 modal.addClass('dialog__close');
-            } else if (modal.hasClass('dialog__close')){
+            } else if (modal.hasClass('dialog__close')) {
                 modal.removeClass('dialog--close');
                 modal.addClass('open');
             }
         })
 
-        $('#dialog__close').click(function(){
+        $('#dialog__close').click(function() {
             log('About to close this damn dialog...!!!')
             var modal = $('#contact-us-mobile');
             if (modal.hasClass('dialog--open')) {
                 modal.removeClass('dialog--open');
                 modal.addClass('dialog__close');
-            } else if (modal.hasClass('dialog__close')){
+            } else if (modal.hasClass('dialog__close')) {
                 modal.removeClass('dialog--close');
                 modal.addClass('open');
             }
