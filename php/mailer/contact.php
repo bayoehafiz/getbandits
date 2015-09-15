@@ -1,23 +1,39 @@
 <?php
 if($_POST){
-    $to = "test123@cuvox.de";
+    require_once "../../vendor/autoload.php";
 
-    $full_name = $_POST['name'];
-    $email_from = $_POST['email'];
-    $from_mail = $full_name.'<'.$email_from.'>';
+    //PHPMailer Object
+    $mail = new PHPMailer;
 
-    $subject = "Email from GetBandits.com visitor";
-    $message = "";
-    $message = $_POST['message'];
+    //From email address and name
+    $mail->From = $_POST['email'];
+    $mail->FromName = $_POST['name'];
 
-    $headers = "" .
-               "Reply-To:" . $from_mail . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
-    $headers .= 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";   
-    $headers .= 'From: ' . $from_mail . "\r\n";     
+    //To address and name
+    //$mail->addAddress("recepient1@example.com", "Recepient Name");
+    $mail->addAddress("qwerty@rhyta.com"); //Recipient name is optional
 
-	//send email
-    mail($to,$subject,$message,$headers);
+    //Address to which recipient will reply
+    $mail->addReplyTo($_POST['email'], "Reply");
+
+    //CC and BCC
+    //$mail->addCC("cc@example.com");
+    //$mail->addBCC("bcc@example.com");
+
+    //Send HTML or Plain Text email
+    $mail->isHTML(true);
+
+    $mail->Subject = "New email from GetBandits.com visitor";
+    $mail->Body = "<i>" . $_POST['message'] . "</i>";
+    $mail->AltBody = "This is the plain text version of the email content";
+
+    if(!$mail->send()) 
+    {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+    } 
+    else 
+    {
+        echo "Message has been sent successfully";
+    }
 }
 ?>
