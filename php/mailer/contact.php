@@ -11,14 +11,14 @@ if($_POST){
 
     //To address and name
     //$mail->addAddress("recepient1@example.com", "Recepient Name");
-    $mail->addAddress("qwerty@rhyta.com"); //Recipient name is optional
+    $mail->addAddress("admin@getbandits.com"); //Recipient name is optional
 
     //Address to which recipient will reply
     $mail->addReplyTo($_POST['email'], "Reply");
 
     //CC and BCC
-    //$mail->addCC("cc@example.com");
-    //$mail->addBCC("bcc@example.com");
+    $mail->addCC("manish@colorblindlabs.com");
+    $mail->addBCC("bayu@colorblindlabs.com");
 
     //Send HTML or Plain Text email
     $mail->isHTML(true);
