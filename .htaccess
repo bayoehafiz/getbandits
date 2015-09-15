@@ -1,13 +1,13 @@
 
 
-RewriteEngine On
-RewriteBase /
-RewriteCond %{HTTP_HOST} !=localhost
-RewriteCond %{HTTP_HOST} !=127.0.0.1
-RewriteCond %{REMOTE_ADDR} !=127.0.0.1
-RewriteCond %{REMOTE_ADDR} !=::1
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{HTTP_HOST} !=localhost
+#RewriteCond %{HTTP_HOST} !=127.0.0.1
+#RewriteCond %{REMOTE_ADDR} !=127.0.0.1
+#RewriteCond %{REMOTE_ADDR} !=::1
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
 #Browser cache
 <IfModule mod_expires.c>

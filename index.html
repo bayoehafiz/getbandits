@@ -492,7 +492,7 @@
         <h2>SHOPPING CART </h2>
         <div class="wrapper">
             <form method="post" id="add-to-cart-form" target="_self">
-                <div class="currency_box" style="text-align:center;">
+                <div class="currency_box" id="currency_box" style="text-align:center;display:none;">
                     <input type="radio" id="radio1" name="currency" value="USD" checked>
                     <label for="radio1">USD</label>
                     <span id='currency_separate'>/</span>
@@ -552,32 +552,32 @@
                 <p class="shipping" style="display:none">
                     Shipping and tax are included.
                 </p>
-                <div id="form-preorder">
+                <div id="form-preorder" style="display:none;">
                     <div class="row">
                         <div class="col-md-12">
                             <p style="color:#fff;font-size:13px;text-align:center;margin-bottom: 20px;">Bandits™ glasses will be available by mid-October 2015. Please provide us with your NAME and EMAIL, so we can contact you furthermore about you pre-order..</p>
                         </div>
                         <div class="col-md-12">
                             <div class="input-group" style="width:100%">
-                                <input type="text" class="form-control" placeholder="Your Name" aria-describedby="basic-addon1">
+                                <input type="text" id="cart-name" class="form-control" placeholder="Your Name" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="input-group" style="width:100%">
-                                <input type="email" class="form-control" placeholder="Your Email" aria-describedby="basic-addon1">
+                                <input type="email" id="cart-email" class="form-control" placeholder="Your Email" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="input-group" style="width:100%">
-                                <input type="text" class="form-control" placeholder="Your City" aria-describedby="basic-addon1">
+                                <input type="text" id="cart-city" class="form-control" placeholder="Your City" aria-describedby="basic-addon1">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- cd-cart-items -->
                 <div class="cd-cart-total">
-                    <button id="btn-checkout" class="checkout-btn button--rayen" data-text="CHECKOUT">
-                        CHECKOUT
+                    <button id="btn-checkout" class="checkout-btn button--rayen" data-text="CONFIRM INTEREST">
+                        CONFIRM INTEREST
                     </button>
                 </div>
                 <!-- cd-cart-total -->

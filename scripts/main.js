@@ -256,6 +256,7 @@ $(function() {
             }
             $('.cd-cart-total').fadeIn();
             $('#no-list').hide();
+            $('#currency_box, #form-preorder').fadeIn();
             // Chaeck if modal is opened
             if (modal.getState() == 'opened') {
                 $('#view-cart-link').fadeIn();
@@ -283,13 +284,6 @@ $(function() {
         }
     }
 
-    // Checkout button action
-    $('#btn-checkout').click(function() {
-        $.getq("TestConn", 'https://cf6f1cfc040292138f3fa2d751c7e35b:d2585d3d4a355bf0113dc5d96ab04bfa@getbandits-com.myshopify.com/admin/orders.json', function() {
-            alert('Coonection Succeeded...')
-        });
-    })
-
     // Adding product to cart
     function addToCart() {
         var aw = parseInt($('#white-amount').val());
@@ -313,6 +307,8 @@ $(function() {
                 $('#black-list').show();
                 $('#black-item').val(ab);
             }
+            $('#currency_box, #form-preorder').fadeIn();
+
             // adjusting checked radio button
             var sessCur = $.jStorage.get('cur');
             if (sessCur == 'USD') {
