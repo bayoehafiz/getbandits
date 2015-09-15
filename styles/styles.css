@@ -33,11 +33,7 @@
     src: url(../fonts/gotham/Gotham-Book.otf);
 }
 
-<<<<<<< HEAD
 body {
-=======
-body{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     font-family: gotham_book!important;
 }
 
@@ -185,11 +181,7 @@ h1#title_section0 span {
     font-family: gotham_book;
 }
 
-<<<<<<< HEAD
 .btn-contact-us {
-=======
-.btn-contact-us{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     display: none;
     border-radius: 4px!important;
     background: none;
@@ -216,13 +208,8 @@ h1#title_section0 span {
     background-size: cover;
 }
 
-<<<<<<< HEAD
 #section0 .bg-slide1 {
     background: url(../images/bandits_newhome_150914.gif);
-=======
-#section0 .bg-slide1{
-   background: url(../images/bandits_newhome_150914.gif);
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     background-position: center;
     background-repeat: no-repeat;
     background-size: 1700px;
@@ -234,71 +221,42 @@ h1#title_section0 span {
     bottom: 0;
 }
 
-<<<<<<< HEAD
 #section1 {
     background-image: url(../images/bekgrouunnd.png);
-=======
-#section1{
-    background-image:url(../images/bekgrouunnd.png);
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
-<<<<<<< HEAD
 #section2 h3 {
-=======
-#section2 h3{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     font-family: gotham_bold;
     color: #fff;
 }
 
-<<<<<<< HEAD
 .slide-content-bandits .bg-content {
-=======
-.slide-content-bandits .bg-content{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     width: 100%;
     height: 100%;
 }
 
-<<<<<<< HEAD
 .slide-content-bandits .bg-content img {
     width: 100%;
 }
 
 .slide-content-bandits h2 {
-=======
-.slide-content-bandits .bg-content img{
-    width: 100%;
-}
-
-.slide-content-bandits h2{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     font-family: gotham_bold;
     margin: 1em 0!important;
     letter-spacing: 12px;
     line-height: 1.5;
 }
 
-<<<<<<< HEAD
 .slide-content-bandits p {
-=======
-.slide-content-bandits p{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     font-family: gotham_book;
     font-size: 15px!important;
     line-height: 1.7;
     letter-spacing: 0.3px;
 }
 
-<<<<<<< HEAD
 ul.slide-content-bandits .content-bandits {
-=======
-ul.slide-content-bandits .content-bandits{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     text-align: left;
     color: #fff;
     height: 503px;
@@ -318,10 +276,6 @@ ul.slide-content-bandits .content-bandits{
     display: none;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 .close-btn {
     display: none!important;
     position: absolute;
@@ -355,28 +309,16 @@ ul.slide-content-bandits .content-bandits{
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-<<<<<<< HEAD
 #cd-cart .wrapper {
-=======
-#cd-cart .wrapper{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     display: table;
     width: 100%;
 }
 
-<<<<<<< HEAD
 #cd-cart .wrapper form {
-=======
-#cd-cart .wrapper form{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     display: table-cell;
     vertical-align: middle;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 /*#cd-cart.speed-in .wrapper {
     width: 100%;
     height: 90%;
@@ -422,16 +364,10 @@ ul.slide-content-bandits .content-bandits{
     color: #fff
 }
 
-<<<<<<< HEAD
 #cd-cart .cd-cart-items li td div {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-=======
-
-#cd-cart .cd-cart-items li td div{
-    width: 85%;margin-left: auto;margin-right: auto;
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 }
 
 #cd-cart .cd-cart-items td:first-child,
@@ -513,11 +449,6 @@ ul.slide-content-bandits .content-bandits{
     padding: 0;
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 #cd-cart .cd-cart-items li td:nth-child(2) input {
     background-color: transparent;
     color: #fff;
@@ -568,12 +499,8 @@ ul.slide-content-bandits .content-bandits{
 #fp-nav.right {
     right: 74px!important
 }
-<<<<<<< HEAD
-#fp-nav {
-=======
 
-#fp-nav{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
+#fp-nav {
     margin-top: -32px!important;
 }
 #fp-nav ul {
@@ -727,17 +654,10 @@ figure.effect-lexi:hover {
 .office_box p {
     font-size: 13px!important;
     line-height: normal;
-<<<<<<< HEAD
     padding: 0;
     color: #fff!important;
     margin: 3px;
     text-align: left;
-=======
-    padding:0;
-    color: #fff!important;
-        margin: 3px;
-        text-align: left;
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 }
 .office_box h5 {
     text-align: left;
@@ -768,24 +688,12 @@ figure.effect-lexi:hover {
     border: 1px solid #fff!important;
     position: relative;
 }
-<<<<<<< HEAD
 .contact-us-btn {
     left: 2.5px;
 }
 .faqs-btn {
     right: 2.5px;
 }
-=======
-
-.contact-us-btn{
-    left:2.5px;
-}
-
-.faqs-btn {
-    right:2.5px;
-}
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 .contact-us-btn:hover,
 .faqs-btn:hover {
     background: #fff!important;
@@ -839,27 +747,14 @@ figure.effect-lexi:hover {
     font-size: 50px;
     font-weight: 800;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 .currency_box {
     margin-bottom: 24px;
     color: #fff;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 .currency_box input[type=radio] {
     display: none;
     margin: 10px;
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 .currency_box input[type=radio] + label {
     display: inline-block;
     margin: -2px;
@@ -867,20 +762,10 @@ figure.effect-lexi:hover {
     background-color: transparent;
     cursor: pointer;
 }
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 .currency_box input[type=radio]:checked + label {
     background-image: none;
     background-color: #fff;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 .cart.open-modal {
     -webkit-transition: top 0.2s ease-in;
     -o-transition: top 0.2s ease-in;
@@ -888,25 +773,15 @@ figure.effect-lexi:hover {
     -moz-transition: top 0.2s ease-in;
     transition: top 0.2s ease-in;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 .remodal-wrapper.remodal-is-opened {
     z-index: 100000;
     display: block!important;
 }
-<<<<<<< HEAD
 .slick-dots {
-=======
-
-.slick-dots{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     left: 0;
     right: 0;
     bottom: 150px!important;
 }
-<<<<<<< HEAD
 .slick-dots li button:before {
     color: #fff!important;
     font-size: 12px!important;
@@ -959,12 +834,8 @@ figure.effect-lexi:hover {
 #form-preorder :-ms-input-placeholder {  
    color: #403B3B;  
 }
-=======
 
 .slick-dots li button:before{
     color: #fff!important;
     font-size: 12px!important;
 }
-
-
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251

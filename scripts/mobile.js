@@ -32,11 +32,7 @@ $(function() {
     });
 
     $('.slide-content-bandits').slick({
-<<<<<<< HEAD
             autoplay: false,
-=======
-            autoplay: true,
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
             autoplaySpeed: 3000,
             easing: 'easy-in',
             dots: true,
@@ -607,19 +603,6 @@ $(function() {
         $('.cart').show();
         log('cart 7 show');
     }
-<<<<<<< HEAD
-    
-=======
-    $('.logo img').attr('src', 'images/bandits_logo_opt.png');
-
-    $_window.resize(function() {
-        if ($_window.width() > 768) {
-            $('.logo img').attr('src', 'images/bandits_logo.png');
-        } else {
-            $('.logo img').attr('src', 'images/bandits_logo_opt.png');
-        }
-    });
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 
     $('#play-video-btn').click(function() {
         $('.bg-overlay-video').fadeIn('fast');

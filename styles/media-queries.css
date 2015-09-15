@@ -1,5 +1,4 @@
 @media screen and (min-width: 768px) {
-<<<<<<< HEAD
     .btn-order-slide2 {
         position: absolute!important;
         bottom: 87px!important
@@ -8,17 +7,6 @@
         display: none!important;
     }
     .btn-order {
-=======
-    .btn-order-slide2{
-        position: absolute!important;
-        bottom: 87px!important
-    }
-    .slide-content-bandits-mobile{
-        display: none!important;
-    }
-
-    .btn-order{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         position: fixed;
         bottom: 87px;
         margin-left: auto!important;
@@ -55,12 +43,8 @@
         -moz-transition: ease;
         transition: ease;
     }
-<<<<<<< HEAD
     #cd-cart-trigger {
         background: none!important;
-=======
-    #cd-cart-trigger {        background: none!important;
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         height: 17px!important;
         width: 32px!important;
     }
@@ -114,17 +98,10 @@
         display: none!important;
     }
     .slide-content-bandits .bg-content {
-=======
     .btn-order-slide2{
         display: none!important;
     }
     .slide-content-bandits .bg-content{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-<<<<<<< HEAD
     .slide-content-bandits h2 {
         font-size: 21px;
     }
@@ -146,29 +123,6 @@
         display: none!important;
     }
     .slide-content-bandits-mobile {
-=======
-    .slide-content-bandits h2{
-        font-size: 21px;
-    }
-    #section0{
-        background-image: none;
-    }
-    #section0 .bg-slide1{
-        background-size: 700px!important;
-        height: auto;
-    }
-    ul.slide-content-bandits .content-bandits{
-        height: auto;
-    }
-    ul.slide-content-bandits .content-bandits h2{
-        letter-spacing: 5px;
-        margin:0!important;
-    }
-    .slide-content-bandits{
-        display: none!important;
-    }
-    .slide-content-bandits-mobile{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         display: block!important;
     }
     .dialog .input-group textarea.form-control {
@@ -343,13 +297,8 @@
     }
     h1#title_section0 {
         font-size: 1em!important;
-<<<<<<< HEAD
         letter-spacing: 5px;
         bottom: 100px;
-=======
-        letter-spacing: 8px;
-            bottom: 100px;
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     }
     .header {
         padding-top: 25px;
@@ -375,11 +324,7 @@
         width: 100%;
     }
     #section1,
-<<<<<<< HEAD
     #section2 {
-=======
-    #section2{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         background-image: none;
     }
     .icon-gif {
@@ -600,12 +545,7 @@
 }
 
 @media screen and (max-width: 992px) {
-<<<<<<< HEAD
     #section0 .bg-slide1 {
-=======
-
-    #section0 .bg-slide1{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         background-size: 1300px
     }
     #play-video-btn {
@@ -624,10 +564,6 @@
     .footer {
         display: none!important;
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
     .bg-overlay-video .box-video-url iframe {
         height: 400px
     }
@@ -639,17 +575,10 @@
         top: 0;
         display: table;
     }
-<<<<<<< HEAD
     .cart {
         right: 30px;
     }
     #fp-nav.right {
-=======
-    .cart{
-        right: 30px;
-    }
-    #fp-nav.right{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         right: 48px;
     }
 }
@@ -679,7 +608,6 @@
     }
 }
 
-<<<<<<< HEAD
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
     #section0 .bg-slide1 {
         background-size: 1300px;
@@ -691,21 +619,6 @@
         bottom: 55px;
     }
     .grid {
-=======
-
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) { 
-    #section0 .bg-slide1{
-        background-size: 1300px;
-    }
-    h1#title_section0{
-        bottom: 110px
-    }
-
-    .btn-order{
-        bottom: 55px;
-    }
-    .grid{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         margin: 0!important;
         max-width: 810px!important;
         margin-left: auto!important;
@@ -716,7 +629,6 @@
 
 /* ----------- iPad mini ----------- */
 
-<<<<<<< HEAD
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
     #section0 .bg-slide1 {
         background-size: 1100px!important;
@@ -766,43 +678,11 @@
         width: 100px;
         font-size: 12px;
     }
-=======
-
-/* Potrait Orientation */
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
-    #cd-cart h2{
-        font-size: 1.8em!important;
-    }
-    .currency_box{
-        margin: 10px 0;
-    }
-
-    .currency_box input[type=radio] + label{
-        width: 60px;
-    }
-
-     .currency_box input[type=radio]:checked + label{
-        background: #fff
-     }
-
-    .cart.open-modal{
-        top: 9px!important
-    }
-
-    #currency_separate{
-        display: none;
-    }
-    #cd-cart .cd-cart-items li td div{
-        width: 75%!important;
-    }
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 }
 
 
 /* Landscape Orientation */
 
-<<<<<<< HEAD
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     #cd-cart {
         padding-top: 0px!important;
@@ -835,40 +715,10 @@
     #fp-nav ul{
         display: none;
     }
-=======
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
-    #cd-cart{
-        padding-top: 0px!important;
-    }
-
-    #cd-cart .checkout-btn{
-        bottom: 20px;
-    }
-    .cart.open-modal{
-        top: 44px;
-    }
-
-    .currency_box input[type=radio]:checked + label {
-        background-color: #fff;
-    }
-
-    #cd-cart .cd-cart-items li td div{
-        width: 75%;
-    }
-
-    #currency_separate{
-        display: none;
-    }
-    .grid{
-        width: 80%;
-    }
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
 }
 
 
 /* ----------- iPhone 5 and 5S ----------- */
-
-<<<<<<< HEAD
 
 /* Portrait and Landscape */
 
@@ -894,36 +744,11 @@
         padding: 0 15px;
     }
     .slide-content-bandits .bg-content {
-=======
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-
-    .cart.open-modal{
-        top: 2px!important;
-        right: 20px
-    }
-
-    #cd-cart h2{
-        font-size: 1em!important;
-    }
-
-    .currency_box{
-        margin: 0;
-    }
-
-    .slick-slide{
-        padding: 0 15px;
-    }
-
-    .slide-content-bandits .bg-content{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         width: 60%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 10px;
     }
-<<<<<<< HEAD
     .slide-content-bandits h2 {
         padding-bottom: 10px;
         font-size: 14px
@@ -945,37 +770,11 @@
         font-size: 8px!important;
     }
     .btn-order-fixed {
-=======
-    .slide-content-bandits h2{
-        padding-bottom: 10px;
-        font-size: 14px
-    }
-    .slide-content-bandits p{
-        line-height: 1.4;
-        padding:0;
-        font-size: 0.8em!important;
-        letter-spacing: 0.1;
-    }
-    #section0 .bg-slide1{
-        background-size: 550px!important;
-        height: auto;
-    }
-
-    .slick-dots {
-        bottom: 55px!important;
-    }
-
-    .slick-dots li button:before{
-        font-size: 8px!important;
-    }
-    .btn-order-fixed{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         width: 80%;
     }
     .btn-order-fixed .btn-order,
     .btn-contact-us,
     .view-cart-link,
-<<<<<<< HEAD
     #cd-cart .checkout-btn {
         font-size: 10px!important;
     }
@@ -998,45 +797,12 @@
         font-size: 15px;
     }
     .button-wrap {
-=======
-    #cd-cart .checkout-btn{
-        font-size: 10px!important;
-    }
-    #cd-cart .checkout-btn{
-        height: 37px!important
-    }
-    .slick-slider{
-        margin-bottom: 0!important
-    }
-
-    .office_box p{
-        padding: 0!important
-    }
-
-    .grid figure h2 {
-        font-size: 12px!important;
-    }
-
-    .grid figure p span.add-to-cart{
-        font-size: 7px!important
-    }
-
-    #section2 h3{
-        font-size: 15px;
-    }
-
-    .button-wrap{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         padding: 1.5em 0 0!important;
     }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-<<<<<<< HEAD
     .checkout-btn {
-=======
-    .checkout-btn{
->>>>>>> 00c69743271d10de1a4e2b5c8e6790f515976251
         position: relative!important;
     }
 }
