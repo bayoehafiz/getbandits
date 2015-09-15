@@ -1,0 +1,13 @@
+{
+    "name": "colorblindlabs/getbandits",
+    "description": "Official site of www.getbandits.com (pre-order version)",
+    "authors": [
+        {
+            "name": "bayuhafiz",
+            "email": "bayu@colorblindlabs.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^5.2"
+    }
+}
