@@ -187,10 +187,11 @@
     #section5 h3 {
         font-size: 15px;
     }
-    #info-contact {
+    .info-contact {
         width: 100%;
         font-size: 11px!important;
         line-height: 1.4;
+        text-align: left!important;
     }
     .office_box h5 {
         font-size: 11px;
@@ -786,7 +787,7 @@
         font-size: 10px!important;
     }
     #cd-cart .checkout-btn {
-        height: 37px!important
+        height: 37px!important;
     }
     .slick-slider {
         margin-bottom: 0!important
@@ -809,7 +810,8 @@
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .checkout-btn {
+    #cd-cart .checkout-btn {
         position: relative!important;
+        bottom: 0;
     }
 }

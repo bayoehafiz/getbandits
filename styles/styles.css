@@ -646,14 +646,14 @@ figure.effect-lexi:hover {
     cursor: pointer;
 }
 .office_box {
-    width: 160px;
+    width: 320px;
     margin-left: auto!important;
     margin-right: auto!important;
     color: #fff
 }
 .office_box p {
     font-size: 13px!important;
-    line-height: normal;
+    line-height: 2;
     padding: 0;
     color: #fff!important;
     margin: 3px;
@@ -699,10 +699,10 @@ figure.effect-lexi:hover {
     font-family: helvetica_neue_bold;
     color: #fff;
 }
-#info-contact {
+.info-contact {
     font-size: 15px!important;
     color: #fff!important;
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.8;
