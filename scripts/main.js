@@ -642,6 +642,49 @@ $(function() {
         location.reload(true);
     });
 
+    // PHP Ajax submit buttons
+    // Contact us submit button
+    var l = Ladda.create(document.querySelector('#btn-submit-desktop'));
+    // Send email handler
+    $('#btn-submit-desktop').click(function() {
+        var data = {
+            name: $("#form-name-desktop").val(),
+            email: $("#form-email-desktop").val(),
+            message: $("#form-message-desktop").val()
+        };
+        l.start();
+        $.ajax({
+            type: "POST",
+            url: "php/mailer/contact.php",
+            data: data,
+            success: function() {
+                $('#btn-submit-desktop').html('<i class="fa fa-paper-plane-o"></i> SENT!');
+                l.stop();
+            }
+        });
+    })
+    // Preorder checkout submit button
+    var m = Ladda.create(document.querySelector('#btn-checkout'));
+    // Send email handler
+    $('#btn-checkout').click(function() {
+        var data = {
+            name: $("#cart-name").val(),
+            email: $("#cart-email").val(),
+            white: $("#white-item").val(),
+            black: $("#black-item").val()
+        };
+        m.start();
+        $.ajax({
+            type: "POST",
+            url: "php/mailer/pre-order.php",
+            data: data,
+            success: function() {
+                $('#btn-checkout').html('<i class="fa fa-check-o"></i> THANK YOU FOR YOUR PRE-ORDER');
+                m.stop();
+            }
+        });
+    })
+
 
     // play button video function
     var video_url = $('.box-video-url iframe').attr('src');
@@ -672,7 +715,6 @@ $(function() {
     var heightViewCartLink = ($_window.height() - 514) / 4;
 
     $('.view-cart-link').css('bottom', heightViewCartLink);
-
 
     // Window resize function
     $_window.resize(function() {
@@ -735,17 +777,12 @@ $(function() {
         })
     });
 
-
-
-    (function() {
-
+    /* (function() {
         var dlgtrigger = document.querySelector('[data-dialog]'),
             somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog')),
             dlg = new DialogFx(somedialog);
-
         dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-
-    })();
+    })(); */
 
     // initiate dummy cart reset
     resetInit();

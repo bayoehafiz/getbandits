@@ -1,7 +1,7 @@
 <?php
 if($_POST){
 
-    $to = "manish@colorblindlabs.com";
+    $to = "test123@cuvox.de";
 
     $full_name = $_POST['name'];
     $email_from = $_POST['email'];
