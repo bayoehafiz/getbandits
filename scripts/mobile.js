@@ -713,7 +713,7 @@ $(function() {
     });
 
 
-    (function() {
+    /*(function() {
 
         var dlgtrigger = document.querySelector('[data-dialog]'),
             somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog')),
@@ -721,7 +721,7 @@ $(function() {
 
         dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 
-    })();
+    })();*/
 
     // initiate dummy cart reset
     resetInit();

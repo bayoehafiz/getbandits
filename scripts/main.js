@@ -742,7 +742,7 @@ $(function() {
 
     var heightViewCartLink = ($_window.height() - 514) / 4;
 
-    $('.view-cart-link').css('bottom', heightViewCartLink);
+    //$('.view-cart-link').css('bottom', heightViewCartLink);
 
     // Window resize function
     $_window.resize(function() {
