@@ -11,25 +11,16 @@ if($_POST){
             'from_name' => $_POST['name'],
             'to' => array(
                 array(
-                    'email' => 'manish@colorblindlabs.com',
+                    'email' => 'bayuhafiz87@gmail.com',
                     'name' => 'Recipient Name',
                     'type' => 'to'
                 )
             ),
             'headers' => array('Reply-To' => $_POST['email']),
-            'important' => false,
-            'track_opens' => null,
-            'track_clicks' => null,
-            'auto_text' => null,
-            'auto_html' => null,
-            'inline_css' => null,
-            'url_strip_qs' => null,
-            'preserve_recipients' => null,
-            'view_content_link' => null,
-            'bcc_address' => 'admin@getbandits.com',
-            'tracking_domain' => null,
-            'signing_domain' => null,
-            'return_path_domain' => null
+            //'bcc_address' => 'admin@getbandits.com',
+            'tracking_domain' => 'www.getbandits.com',
+            'signing_domain' => 'www.getbandits.com',
+            'return_path_domain' => 'www.getbandits.com'
         );
         $async = false;
         $result = $mandrill->messages->send($message, $async);

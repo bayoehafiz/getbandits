@@ -666,21 +666,15 @@ $(function() {
             })
             .done(function(data) {
                 // show the response
-                //alert(data);
+                $('.email-alert').html(data);
                 $('#btn-submit-desktop').html('<i class="fa fa-check-o"></i> SENT!');
                 l.stop();
-
-            })
-            .fail(function() {
-                $('#btn-submit-desktop').html('<i class="fa fa-circle-o"></i> FAILED!');
-                l.stop();
-                // just in case posting your form failed
-                //alert("Posting failed.");
-
             });
         // to prevent refreshing the whole page page
         return false;
     });
+
+
     // Preorder checkout submit button
     var m = Ladda.create(document.querySelector('#btn-checkout'));
     // Send email handler
