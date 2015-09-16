@@ -711,6 +711,7 @@ figure.effect-lexi:hover {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.8;
+    text-align: center!important;
 }
 .submit-btn {
     float: right;
