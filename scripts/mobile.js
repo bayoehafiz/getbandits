@@ -408,7 +408,7 @@ $(function() {
     // initiate pre-order modal
     var modal = $('[data-remodal-id=pre-order]').remodal();
     $('<button id="view-cart-link" class="btn view-cart-link button--rayen" data-text="VIEW CART" href="#cart">VIEW CART</button>').insertAfter('div[data-remodal-id="pre-order"]');
-    $('<div class="close-btn" id="cd-close-btn" data-remodal-action="close"><i class="fa fa-times"></i></div>').appendTo('.remodal-wrapper');
+    $('<div class="close-btn" id="cd-close-btn" data-remodal-action="close"><div class="box-close-preorder"><div class="close-preorder first"></div><div class="close-preorder second"></div></div></div>').appendTo('.remodal-wrapper');
     $('.logo').show();
     genIcon('close');
 

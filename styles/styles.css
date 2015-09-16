@@ -587,6 +587,39 @@ input[type=number] {
     transition: transform .3s;
     color: transparent;
 }
+
+.box-close-preorder{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 25px;
+}
+.close-preorder{
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+    color: #fff;
+}
+
+.close-preorder.first{
+    -webkit-transform: translate(0, 12px) rotate(-45deg)!important;
+    -o-transform: translate(0, 12px) rotate(-45deg)!important;
+    -ms-transform: translate(0, 12px) rotate(-45deg)!important;
+    -moz-transform: translate(0, 12px) rotate(-45deg)!important;
+    transform: translate(0, 12px) rotate(-45deg)!important;
+}
+
+.close-preorder.second{
+    -webkit-transform: translate(0, 10px) rotate(45deg)!important;
+    -o-transform: translate(0, 10px) rotate(45deg)!important;
+    -ms-transform: translate(0, 10px) rotate(45deg)!important;
+    -moz-transform: translate(0, 10px) rotate(45deg)!important;
+    transform: translate(0, 10px) rotate(45deg)!important;
+}
+
 .cart > a > div.first {
     width: 11px;
     position: relative!important;
