@@ -610,6 +610,30 @@ $(function() {
         $(this).hide();
     });
 
+    // Contact us submit button
+    var l = Ladda.create(document.querySelector('#btn-submit-mobile'));
+    // Send email handler
+    $('#btn-submit-mobile').click(function() {
+        var data = {
+            name: $("#form-name-mobile").val(),
+            email: $("#form-email-mobile").val(),
+            message: $("#form-message-mobile").val()
+        };
+        l.start();
+        $.ajax({
+                type: "POST",
+                url: "contact.php",
+                data: data
+            })
+            .done(function(data) {
+                // show the response
+                $('#btn-submit-mobile > span').html(data.status);
+                l.stop();
+            });
+        // to prevent refreshing the whole page page
+        return false;
+    });
+
 
     // Session buttons
     $('#btn-show-session').click(function() {
@@ -653,7 +677,7 @@ $(function() {
 
 
     $_window.resize(function() {
-        var desktop = $('#btn-contact-us-desktop');
+        var desktop = $('#btn-contact-us-mobile');
         var mobile = $('#btn-contact-us-mobile');
 
         if ($_window.width() <= 768) {
@@ -673,7 +697,7 @@ $(function() {
             $('.btn-order,.view-cart-link,.checkout-btn').addClass('button--rayen');
 
             // Contact us button handler
-            desktop.attr('data-dialog', 'contact-us-desktop');
+            desktop.attr('data-dialog', 'contact-us-mobile');
             mobile.removeAttr('data-dialog');
             console.log('Desktop: ' + desktop.attr('data-dialog') + ', Mobile: ' + mobile.attr('data-dialog'));
             
@@ -681,15 +705,15 @@ $(function() {
         }
 
         // trigger button click
-        $('#btn-contact-us-desktop').click(function(){
-            $('#contact-us-desktop').addClass('dialog--open');
+        $('#btn-contact-us-mobile').click(function(){
+            $('#contact-us-mobile').addClass('dialog--open');
         })
         $('#btn-contact-us-mobile').click(function(){
             $('#contact-us-mobile').addClass('dialog--open');
         })
 
-        $('#contact-us-desktop > div.dialog__overlay').click(function(){
-            var modal = $('#contact-us-desktop');
+        $('#contact-us-mobile > div.dialog__overlay').click(function(){
+            var modal = $('#contact-us-mobile');
             if (modal.hasClass('dialog--open')) {
                 modal.removeClass('dialog--open');
                 modal.addClass('dialog__close');

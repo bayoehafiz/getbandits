@@ -258,8 +258,8 @@ $(function() {
             if ($('#cd-cart-trigger').attr('data-icon') == 'cart') {
                 $('#cd-cart-trigger').addClass('items-added').find('span').html(t);
             }
-            $('.cd-cart-total').fadeIn();
             $('#no-list').hide();
+            $('.cd-cart-total').fadeIn();
             $('#currency_box, #form-preorder').fadeIn();
             // Chaeck if modal is opened
             if (modal.getState() == 'opened') {
@@ -268,11 +268,11 @@ $(function() {
                 $('#view-cart-link').hide();
             }
         } else {
-            $('.cd-cart-total').hide();
-            $('.no-list').fadeIn();
             $('#add-to-cart-form').attr('action', '');
+            $('.cd-cart-total').hide();
             $('.cd-cart').removeClass('items-added');
             $('#view-cart-link').hide();
+            $('#currency_box, #form-preorder').hide();
             $('#no-list').fadeIn();
         }
         // begin the currency converter
@@ -296,6 +296,7 @@ $(function() {
             log('No item added');
             $('#white-list').hide();
             $('#black-list').hide();
+            $('#currency_box, #form-preorder').hide();
             $('.cd-cart-total').hide();
         } else { // there are items to add
             $('#no-list').hide();
@@ -311,8 +312,8 @@ $(function() {
                 $('#black-list').show();
                 $('#black-item').val(ab);
             }
-            $('#currency_box, #form-preorder').fadeIn();
 
+            $('#currency_box, #form-preorder').fadeIn();
             // adjusting checked radio button
             var sessCur = $.jStorage.get('cur');
             if (sessCur == 'USD') {
@@ -708,8 +709,9 @@ $(function() {
                             });
                     });
             });
-        $('#btn-checkout > span').html('SUBMITTED');
         m.stop();
+        $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
+
         return false;
     });
 
