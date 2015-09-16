@@ -12,7 +12,7 @@ if($_POST){
             'to' => array(
                 array(
                     'email' => 'bayu@colorblindlabs.com',
-                    'name' => 'Recipient Name',
+                    'name' => 'Bandits Team',
                     'type' => 'to'
                 )
             ),

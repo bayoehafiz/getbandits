@@ -666,8 +666,7 @@ $(function() {
             })
             .done(function(data) {
                 // show the response
-                $('.email-alert').html(data);
-                $('#btn-submit-desktop').html('<i class="fa fa-check-o"></i> SENT!');
+                $('#btn-submit-desktop').html(data.status);
                 l.stop();
             });
         // to prevent refreshing the whole page page
