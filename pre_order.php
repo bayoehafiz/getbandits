@@ -49,8 +49,8 @@ if($_POST){
         );
         $message = array(
             'subject' => 'Thank you for your pre-order',
-            'from_email' => 'manish@colorblindlabs.com',
-            'from_name' => 'Bandits Team',
+            'from_email' => 'hey@getbandits.com',
+            'from_name' => 'Bandits Support',
             'to' => array(
                 array(
                     'email' => $_POST['email'],
@@ -58,7 +58,7 @@ if($_POST){
                     'type' => 'to'
                 )
             ),
-            'headers' => array('Reply-To' => 'contact@getbandits.com'),
+            'headers' => array('Reply-To' => 'hey@getbandits.com'),
             'tracking_domain' => null,
             'signing_domain' => null,
             'return_path_domain' => null
