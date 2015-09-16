@@ -172,7 +172,7 @@
     <script async type="text/javascript" src="scripts/tiltfx.js"></script>
     <script async src="//openexchangerates.github.io/money.js/money.min.js"></script>
     <script async src="//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
-    <script async type="text/javascript" src="scripts/spin.js"></script>
+    <script type="text/javascript" src="scripts/spin.js"></script>
     <script async type="text/javascript" src="scripts/ladda.js"></script>
     <script async type="text/javascript" src="scripts/dialogFx.js"></script>
     <script async type="text/javascript" src="scripts/jstorage.js"></script>
@@ -515,7 +515,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <input id="white-item" name="r1" type="number" value="0" min="0" max="9999" style="width: 100%;font-weight: bold;">
+                                        <input id="white-item" id="r1" type="number" value="0" min="0" max="9999" style="width: 100%;font-weight: bold;">
                                     </td>
                                     <td>PURE WHITE
                                         <br> <span id="white-total">0</span>
@@ -581,7 +581,7 @@
                 </div>
                 <!-- cd-cart-items -->
                 <div class="cd-cart-total">
-                    <button id="btn-checkout" class="ladda-button" data-style="expand-left">
+                    <button id="btn-checkout" class="ladda-button" data-style="expand-left" data-size="l" data-spinner-color="#DCDCDC">
                         <span class="ladda-label">CONFIRM INTEREST</span>
                     </button>
                 </div>
@@ -616,9 +616,10 @@
                 <div class="input-group">
                     <textarea id="form-message-desktop" class="form-control" placeholder="Your message here :)"></textarea>
                 </div>
-                <button id="btn-submit-desktop" class="ladda-button submit-btn" data-style="expand-left">
+                <button id="btn-submit-desktop" class="ladda-button" data-style="expand-left" data-size="l" data-spinner-color="#DCDCDC">
                     <span class="ladda-label">SUBMIT</span>
                 </button>
+                <input type="hidden" id="contact-desktop-submit-status" value="none"/>
             </div>
         </div>
     </div>
