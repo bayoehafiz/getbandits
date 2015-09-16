@@ -52,10 +52,10 @@ $(function() {
     });
 
     $('.slide-content-bandits').slick({
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots: true,
-            dotsClass: 'slick-dots'
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        dotsClass: 'slick-dots'
     });
 
     // Initiate qty spinner
@@ -682,7 +682,8 @@ $(function() {
             email: $("#cart-email").val(),
             city: $("#cart-city").val(),
             white: $("#white-item").val(),
-            black: $("#black-item").val()
+            black: $("#black-item").val(),
+            date: now()
         };
         m.start();
         $.ajax({
@@ -691,8 +692,15 @@ $(function() {
                 data: data
             })
             .done(function(data) {
-                $('#btn-checkout > span').html(data.status);
-                m.stop();
+                $.ajax({
+                        type: "POST",
+                        url: "crud/insert.php",
+                        data: data
+                    })
+                    .done(function(data) {
+                        $('#btn-checkout > span').html(data.status);
+                        m.stop();
+                    });
             });
     });
 
