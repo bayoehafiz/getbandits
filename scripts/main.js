@@ -693,7 +693,7 @@ $(function() {
             })
             .done(function(data) {
                 $('#btn-checkout > span').html(data.status);
-                l.stop();
+                m.stop();
             });
     });
 
