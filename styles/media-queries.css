@@ -95,6 +95,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .shipping-mid{
+        top: -30%;
+        font-size: 15px;
+    }
     .social{
         margin-top: 30px;
     }
@@ -664,6 +668,10 @@
 
     .slide-content-bandits p{
         font-size: 15px!important;
+    }
+
+    #modal-qty-white, #modal-qty-black{
+        font-size: 35px
     }
 }
 

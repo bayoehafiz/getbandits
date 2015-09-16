@@ -429,7 +429,8 @@ ul.slide-content-bandits .content-bandits {
     float: none!important;
 }
 
-#cd-cart .checkout-btn ,#btn-checkout{
+#cd-cart .checkout-btn,
+#btn-checkout {
     height: 47px!important;
     line-height: normal!important;
     font-size: 14px;
@@ -485,6 +486,7 @@ ul.slide-content-bandits .content-bandits {
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    bottom: 10%;
 }
 
 
@@ -689,7 +691,6 @@ figure.effect-lexi:hover {
     position: relative;
     float: left;
 }
-
 .contact-us-btn:hover,
 .faqs-btn:hover {
     background: #fff!important;
@@ -785,52 +786,53 @@ figure.effect-lexi:hover {
 #form-preorder {
     margin: 5px 0;
 }
-
-#form-preorder input{
+#form-preorder input {
     background: #ECEAEA;
     border-color: rgba(95, 94, 96, 0.46);
     color: #000;
     height: 39px;
 }
-
-#form-preorder input[placeholder="Your Name"]{
+#form-preorder input[placeholder="Your Name"] {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
-
-#form-preorder input[placeholder="Your City"]{
+#form-preorder input[placeholder="Your City"] {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
-
-#form-preorder input:focus{
-    color:#000;
+#form-preorder input:focus {
+    color: #000;
 }
-
-#form-preorder input:blur{
-    color:#fff;
+#form-preorder input:blur {
+    color: #fff;
 }
-
 #form-preorder input-placeholder {
-   color: #403B3B;
+    color: #403B3B;
 }
-
-#form-preorder ::-webkit-input-placeholder {
-   color: #403B3B;
+#form-preorder::-webkit-input-placeholder {
+    color: #403B3B;
 }
-
-#form-preorder :-moz-placeholder { /* Firefox 18- */
-   color: #403B3B;  
+#form-preorder:-moz-placeholder {
+    /* Firefox 18- */
+    
+    color: #403B3B;
 }
-
-#form-preorder ::-moz-placeholder {  /* Firefox 19+ */
-   color: #403B3B;  
+#form-preorder::-moz-placeholder {
+    /* Firefox 19+ */
+    
+    color: #403B3B;
 }
-
-#form-preorder :-ms-input-placeholder {  
-   color: #403B3B;  
+#form-preorder:-ms-input-placeholder {
+    color: #403B3B;
 }
-
-.grid figure figcaption{
+.grid figure figcaption {
     padding: 1em!important
+}
+.shipping-mid {
+    position: absolute;
+    top: -25px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    width: 100%;
+    font-size: 17px;
 }
