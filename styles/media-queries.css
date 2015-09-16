@@ -619,20 +619,51 @@
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+    #section0{
+        background-image: none;
+    }
     #section0 .bg-slide1 {
-        background-size: 1300px;
+        background-size: 1100px;
     }
     h1#title_section0 {
-        bottom: 110px
+        bottom: 110px;
+        font-size: 1em!important;
+        letter-spacing: 10px;
     }
     .btn-order {
         bottom: 55px;
     }
     .grid {
         margin: 0!important;
-        max-width: 810px!important;
+        max-width: 710px!important;
         margin-left: auto!important;
         margin-right: auto!important;
+    }
+    #btn-checkout{
+        position: inherit;
+        width: 100%!important
+    }
+
+    #cd-cart .cd-cart-total{
+        padding-top: 2em!important
+    }
+
+    #form-preorder input{
+        font-size: 12px;
+    }
+
+    .slide-content-bandits .bg-content{
+        width: 75%;
+        margin-top: 25px;
+    }
+    .slide-content-bandits h2{
+        font-size: 20px;
+        line-height: 1;
+        margin: 0!important
+    }
+
+    .slide-content-bandits p{
+        font-size: 15px!important;
     }
 }
 
@@ -747,6 +778,14 @@
 
     .button-wrap{
         padding: 1.5em 0 0!important;
+    }
+    .slide-content-bandits h2{
+        margin:0!important;
+        font-size: 20px;
+    }
+
+    .slide-content-bandits p{
+        font-size: 13px;
     }
 }
 

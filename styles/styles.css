@@ -830,3 +830,7 @@ figure.effect-lexi:hover {
 #form-preorder :-ms-input-placeholder {  
    color: #403B3B;  
 }
+
+.grid figure figcaption{
+    padding: 1em!important
+}
