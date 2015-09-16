@@ -666,7 +666,7 @@ $(function() {
             })
             .done(function(data) {
                 // show the response
-                $('#btn-submit-desktop').html(data.status);
+                $('#btn-submit-desktop > span').html(data.status);
                 l.stop();
             });
         // to prevent refreshing the whole page page
@@ -692,13 +692,7 @@ $(function() {
                 data: data
             })
             .done(function(data) {
-                alert(data);
-                $('#btn-checkout').html('<i class="fa fa-check-o"></i> THANK YOU FOR YOUR PREORDER!');
-                l.stop();
-            })
-            .fail(function(data) {
-                alert(data);
-                $('#btn-checkout').html('<i class="fa fa-circle-o"></i> FAILED!');
+                $('#btn-checkout > span').html(data.status);
                 l.stop();
             });
     });

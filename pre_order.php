@@ -44,7 +44,7 @@ if($_POST){
         );
         $message = array(
             'subject' => 'Thank you for your pre-order',
-            'from_email' => 'mailer@getbandits.com',
+            'from_email' => 'contact@getbandits.com',
             'from_name' => 'Bandits Team',
             'to' => array(
                 array(
@@ -54,16 +54,7 @@ if($_POST){
                 )
             ),
             'headers' => array('Reply-To' => 'contact@getbandits.com'),
-            'important' => false,
-            'track_opens' => null,
-            'track_clicks' => null,
-            'auto_text' => null,
-            'auto_html' => null,
-            'inline_css' => null,
-            'url_strip_qs' => null,
-            'preserve_recipients' => null,
-            'view_content_link' => null,
-            'bcc_address' => 'manish@colorblindlabs.com',
+            'bcc_address' => 'bayu@colorblindlabs.com',
             'tracking_domain' => null,
             'signing_domain' => null,
             'return_path_domain' => null
@@ -71,7 +62,7 @@ if($_POST){
         $async = false;
         $result = $mandrill->messages->sendTemplate($template_name, $template_content, $message, $async);
         print_r($result);
-        
+
     } catch(Mandrill_Error $e) {
         // Mandrill errors are thrown as exceptions
         echo 'A mandrill error occurred: ' . get_class($e) . ' - ' . $e->getMessage();
