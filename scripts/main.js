@@ -688,7 +688,7 @@ $(function() {
         m.start();
         $.ajax({
                 type: "POST",
-                url: "pre-order.php",
+                url: "pre_order.php",
                 data: data
             })
             .done(function(data) {
