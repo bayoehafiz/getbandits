@@ -11,12 +11,12 @@ if($_POST){
         $message = array(
             'html' => '<div style="font-size:1.5em;">New preorder from ' . $_POST['name'] . ' (' . $_POST['email'] . ') at ' . date("Y-m-d H:i:s") . '<br/><br/>Pure White: ' . $_POST['white']. ' item(s)<br/>Solid Black: ' . $_POST['black'] . ' item(s)<br/>Total paid: $' . $totPrice . '</div>',
             'subject' => 'New Bandits Pre-order',
-            'from_email' => 'do-not-reply@getbandits.com',
-            'from_name' => 'Bandits Mailer',
+            'from_email' => 'Mailer@getbandits.com',
+            'from_name' => 'Bandits Automatic Mailer',
             'to' => array(
                 array(
-                    'email' => 'manish@colorblindlabs.com',
-                    'name' => 'Bandits Team',
+                    'email' => 'hey@getbandits.com',
+                    'name' => 'Bandits Support',
                     'type' => 'to'
                 )
             ),

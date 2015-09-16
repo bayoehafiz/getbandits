@@ -665,7 +665,7 @@ $(function() {
             })
             .done(function(data) {
                 // show the response
-                $('#btn-submit-desktop > span').html(data.status);
+                $('#btn-submit-desktop > span').html("Your email is sent!");
                 l.stop();
             });
         // to prevent refreshing the whole page page
