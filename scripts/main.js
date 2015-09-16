@@ -105,8 +105,7 @@ $(function() {
     // Generate log
     function log(msg) {
         var bar = new $.peekABar({
-            autohide: true,
-            delay: 3000,
+            autohide: false,
             closeOnClick: true,
             html: msg
         });
@@ -682,8 +681,7 @@ $(function() {
             email: $("#cart-email").val(),
             city: $("#cart-city").val(),
             white: $("#white-item").val(),
-            black: $("#black-item").val(),
-            date: now()
+            black: $("#black-item").val()
         };
         m.start();
         $.ajax({
@@ -691,17 +689,27 @@ $(function() {
                 url: "pre_order.php",
                 data: data
             })
-            .done(function() {
+            .done(function(msg) {
+                log(msg);
                 $.ajax({
                         type: "POST",
-                        url: "crud/insert.php",
+                        url: "pre_order_admin.php",
                         data: data
                     })
-                    .done(function(stat) {
-                        $('#btn-checkout > span').html(stat.status);
-                        m.stop();
+                    .done(function(msg2) {
+                        log(msg2);
+                        $.ajax({
+                                type: "POST",
+                                url: "insert.php",
+                                data: data
+                            })
+                            .done(function(msg3) {
+                                log(msg3);
+                            });
                     });
             });
+        $('#btn-checkout > span').html('SUBMITTED');
+        m.stop();
         return false;
     });
 

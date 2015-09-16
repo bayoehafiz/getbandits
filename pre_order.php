@@ -4,6 +4,7 @@ if($_POST){
 
     $totWhite = intval($_POST['white']) * 22;
     $totBlack = intval($_POST['black']) * 22;
+    $totPrice = $totWhite + $totBlack;
 
     try {
         $mandrill = new Mandrill('5O8bMd9RhEd7hrcSNqFfFg');
@@ -38,6 +39,10 @@ if($_POST){
                 'content' => $totBlack
             ),
             array(
+                'name' => 'total',
+                'content' => $totPrice
+            ),
+            array(
                 'name' => 'date',
                 'content' => date("Y-m-d H:i:s")
             )
@@ -54,7 +59,6 @@ if($_POST){
                 )
             ),
             'headers' => array('Reply-To' => 'contact@getbandits.com'),
-            'bcc_address' => 'bayu@colorblindlabs.com',
             'tracking_domain' => null,
             'signing_domain' => null,
             'return_path_domain' => null
