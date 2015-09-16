@@ -37,6 +37,10 @@ body {
     font-family: gotham_book!important;
 }
 
+#bandits-email{
+    font-family: gotham_bold
+}
+
 .outer {
     height: 100%;
     width: 100%;
@@ -785,6 +789,12 @@ figure.effect-lexi:hover {
 }
 #form-preorder {
     margin: 5px 0;
+}
+
+#form-preorder .input-group{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 #form-preorder input {
     background: #ECEAEA;
