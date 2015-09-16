@@ -691,17 +691,18 @@ $(function() {
                 url: "pre_order.php",
                 data: data
             })
-            .done(function(data) {
+            .done(function() {
                 $.ajax({
                         type: "POST",
                         url: "crud/insert.php",
                         data: data
                     })
-                    .done(function(data) {
-                        $('#btn-checkout > span').html(data.status);
+                    .done(function(stat) {
+                        $('#btn-checkout > span').html(stat.status);
                         m.stop();
                     });
             });
+        return false;
     });
 
 
