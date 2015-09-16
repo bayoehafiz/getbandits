@@ -15,7 +15,7 @@ if($_POST){
             'from_name' => 'Bandits Mailer',
             'to' => array(
                 array(
-                    'email' => 'bayu@colorblindlabs.com',
+                    'email' => 'manish@colorblindlabs.com',
                     'name' => 'Bandits Team',
                     'type' => 'to'
                 )

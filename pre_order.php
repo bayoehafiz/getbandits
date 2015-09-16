@@ -49,7 +49,7 @@ if($_POST){
         );
         $message = array(
             'subject' => 'Thank you for your pre-order',
-            'from_email' => 'contact@getbandits.com',
+            'from_email' => 'manish@colorblindlabs.com',
             'from_name' => 'Bandits Team',
             'to' => array(
                 array(
