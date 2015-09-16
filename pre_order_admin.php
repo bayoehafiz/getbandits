@@ -2,13 +2,17 @@
 if($_POST){
     require 'mailer/Mandrill.php';
 
+    $totWhite = intval($_POST['white']) * 22;
+    $totBlack = intval($_POST['black']) * 22;
+    $totPrice = $totWhite + $totBlack;
+
     try {
         $mandrill = new Mandrill('5O8bMd9RhEd7hrcSNqFfFg');
         $message = array(
-            'html' => $_POST['message'],
-            'subject' => 'New message from GetBandits.com visitor',
-            'from_email' => $_POST['email'],
-            'from_name' => $_POST['name'],
+            'html' => '<div style="font-size:1.5em;">New preorder from ' . $_POST['name'] . ' (' . $_POST['email'] . ') at ' . date("Y-m-d H:i:s") . '<br/><br/>Pure White: ' . $_POST['white']. ' item(s)<br/>Solid Black: ' . $_POST['black'] . ' item(s)<br/>Total paid: $' . $totPrice . '</div>',
+            'subject' => 'New Bandits Pre-order',
+            'from_email' => 'do-not-reply@getbandits.com',
+            'from_name' => 'Bandits Mailer',
             'to' => array(
                 array(
                     'email' => 'manish@colorblindlabs.com',
@@ -16,10 +20,9 @@ if($_POST){
                     'type' => 'to'
                 )
             ),
-            'headers' => array('Reply-To' => $_POST['email']),
-            'tracking_domain' => 'www.getbandits.com',
-            'signing_domain' => 'www.getbandits.com',
-            'return_path_domain' => 'www.getbandits.com'
+            'tracking_domain' => null,
+            'signing_domain' => null,
+            'return_path_domain' => null
         );
         $async = false;
         $result = $mandrill->messages->send($message, $async);
