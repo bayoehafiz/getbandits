@@ -11,13 +11,13 @@ if($_POST){
             'from_name' => $_POST['name'],
             'to' => array(
                 array(
-                    'email' => 'bayuhafiz87@gmail.com',
+                    'email' => 'bayu@colorblindlabs.com',
                     'name' => 'Recipient Name',
                     'type' => 'to'
                 )
             ),
             'headers' => array('Reply-To' => $_POST['email']),
-            //'bcc_address' => 'admin@getbandits.com',
+            'bcc_address' => 'admin@getbandits.com',
             'tracking_domain' => 'www.getbandits.com',
             'signing_domain' => 'www.getbandits.com',
             'return_path_domain' => 'www.getbandits.com'
