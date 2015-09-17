@@ -31,6 +31,10 @@ $(function() {
         }
     });
 
+    $('.logo').click(function () {
+        $.fn.fullpage.moveTo(1);
+    });
+
     $('.slide-content-bandits').slick({
             autoplay: true,
             autoplaySpeed: 3000,
@@ -287,6 +291,7 @@ $(function() {
                 $('#cd-cart-trigger').addClass('items-added').find('span').html(t);
             }
             $('.cd-cart-total').fadeIn();
+            $('#form-preorder').fadeIn();
             $('#no-list').hide();
             // Chaeck if modal is opened
             if (modal.getState() == 'opened') {
@@ -300,6 +305,7 @@ $(function() {
             $('#add-to-cart-form').attr('action', '');
             $('.cd-cart').removeClass('items-added');
             $('#view-cart-link').hide();
+            $('#form-preorder').hide();
             $('#no-list').fadeIn();
         }
 
@@ -329,6 +335,7 @@ $(function() {
             $('#white-list').hide();
             $('#black-list').hide();
             $('.cd-cart-total').hide();
+            $('#form-preorder').hide();
         } else {
             $('#no-list').hide();
             $('#white-list').hide();
@@ -349,6 +356,7 @@ $(function() {
                 $('#black-item').val(ab);
                 $('#black-total').text(btot);
             }
+            $('#form-preorder').fadeIn();
             cartCounter();
         }
     }
@@ -408,10 +416,9 @@ $(function() {
     // initiate pre-order modal
     var modal = $('[data-remodal-id=pre-order]').remodal();
     $('<button id="view-cart-link" class="btn view-cart-link button--rayen" data-text="VIEW CART" href="#cart">VIEW CART</button>').insertAfter('div[data-remodal-id="pre-order"]');
-    $('<div class="close-btn" id="cd-close-btn" data-remodal-action="close"><i class="fa fa-times"></i></div>').appendTo('.remodal-wrapper');
+    $('<div class="close-btn" id="cd-close-btn" data-remodal-action="close"><div class="box-close-preorder"><div class="close-preorder first"></div><div class="close-preorder second"></div></div></div>').appendTo('.remodal-wrapper');
     $('.logo').show();
     genIcon('close');
-
 
     // Modal opening 
     $(document).on('opening', '.remodal', function() {
@@ -646,7 +653,7 @@ $(function() {
             black: $("#black-item").val()
         };
         m.start();
-        $.ajax({
+        /*$.ajax({
                 type: "POST",
                 url: "pre_order.php",
                 data: data
@@ -669,9 +676,11 @@ $(function() {
                                 log(msg3);
                             });
                     });
-            });
+            });*/
         m.stop();
-        $('#btn-checkout > span.ladda-label').html('THANKS FOR YOUR ORDER');
+        
+        $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
+        $('#btn-checkout').attr('data-text','THANK YOU FOR YOUR ORDER');
 
         return false;
     });

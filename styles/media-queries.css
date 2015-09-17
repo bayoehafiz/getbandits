@@ -204,7 +204,6 @@
         width: 100%;
         font-size: 11px!important;
         line-height: 1.4!important;
-        text-align: left!important;
     }
     .office_box h5 {
         font-size: 11px;
@@ -894,6 +893,10 @@
 
     .social .button-wrap{
         padding: 1em 0 0!important;
+    }
+
+    #cd-cart .cd-cart-items li td:nth-child(3){
+            font-size: 0.8em!important;
     }
 
 }
