@@ -1,4 +1,15 @@
 $(function() {
+    // Validation Function
+    $('#form-contact-us-desktop').formValidation({
+            framework: 'bootstrap'
+        })
+        .on('success.field.fv', function(e, data) {
+            if (data.fv.getInvalidFields().length > 0) { // There is invalid field
+                data.fv.disableSubmitButtons(true);
+            }
+        });
+
+
     $_window = $(window);
     $_height = $_window.height();
     $('.side').css({
@@ -7,7 +18,7 @@ $(function() {
     $('#fullpage').fullpage({
         menu: '#menu',
         sectionsColor: ['#000', '#000', '#000'],
-        anchors: ['home', 'product1','contact'],
+        anchors: ['home', 'product1', 'contact'],
         navigation: true,
         autoScrolling: true,
         scrollingSpeed: 1000,
@@ -31,15 +42,15 @@ $(function() {
         }
     });
 
-    $('.logo').click(function () {
+    $('.logo').click(function() {
         $.fn.fullpage.moveTo(1);
     });
 
     $('.slide-content-bandits').slick({
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots: true,
-            dotsClass: 'slick-dots'
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        dotsClass: 'slick-dots'
     });
 
     // generate session reset btn if on local
@@ -678,9 +689,9 @@ $(function() {
                     });
             });*/
         m.stop();
-        
+
         $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
-        $('#btn-checkout').attr('data-text','THANK YOU FOR YOUR ORDER');
+        $('#btn-checkout').attr('data-text', 'THANK YOU FOR YOUR ORDER');
 
         return false;
     });
@@ -732,7 +743,7 @@ $(function() {
         var mobile = $('#btn-contact-us-mobile');
 
         if ($_window.width() <= 768) {
-            
+
             $('.view-cart-link').css('bottom', '10px');
             $('.btn-order,.view-cart-link,.checkout-btn').removeClass('button--rayen');
 
@@ -740,7 +751,7 @@ $(function() {
             mobile.attr('data-dialog', 'contact-us-mobile');
             desktop.removeAttr('data-dialog');
             console.log('Desktop: ' + desktop.attr('data-dialog') + ', Mobile: ' + mobile.attr('data-dialog'));
-            
+
             resize_function($_window.width());
         } else {
 
@@ -751,36 +762,36 @@ $(function() {
             desktop.attr('data-dialog', 'contact-us-mobile');
             mobile.removeAttr('data-dialog');
             console.log('Desktop: ' + desktop.attr('data-dialog') + ', Mobile: ' + mobile.attr('data-dialog'));
-            
+
             resize_function("560px");
         }
 
         // trigger button click
-        $('#btn-contact-us-mobile').click(function(){
+        $('#btn-contact-us-mobile').click(function() {
             $('#contact-us-mobile').addClass('dialog--open');
         })
-        $('#btn-contact-us-mobile').click(function(){
+        $('#btn-contact-us-mobile').click(function() {
             $('#contact-us-mobile').addClass('dialog--open');
         })
 
-        $('#contact-us-mobile > div.dialog__overlay').click(function(){
+        $('#contact-us-mobile > div.dialog__overlay').click(function() {
             var modal = $('#contact-us-mobile');
             if (modal.hasClass('dialog--open')) {
                 modal.removeClass('dialog--open');
                 modal.addClass('dialog__close');
-            } else if (modal.hasClass('dialog__close')){
+            } else if (modal.hasClass('dialog__close')) {
                 modal.removeClass('dialog--close');
                 modal.addClass('open');
             }
         })
 
-        $('#dialog__close').click(function(){
+        $('#dialog__close').click(function() {
             log('About to close this damn dialog...!!!')
             var modal = $('#contact-us-mobile');
             if (modal.hasClass('dialog--open')) {
                 modal.removeClass('dialog--open');
                 modal.addClass('dialog__close');
-            } else if (modal.hasClass('dialog__close')){
+            } else if (modal.hasClass('dialog__close')) {
                 modal.removeClass('dialog--close');
                 modal.addClass('open');
             }
