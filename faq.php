@@ -141,7 +141,7 @@
 </head>
 <body>
 	<div class="container">
-        <a href="index.html" id="close"><div class="box-close-preorder"><div class="close-preorder first"></div><div class="close-preorder second"></div></div></a>
+        <a href="index.php" id="close"><div class="box-close-preorder"><div class="close-preorder first"></div><div class="close-preorder second"></div></div></a>
 		<div class="outer">
 			<div class="middle">
 				<div class="row">

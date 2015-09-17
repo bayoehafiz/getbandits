@@ -1,0 +1,192 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get Bandits&trade; - The Party Glasses</title>
+<meta name="author" content="Alvaro Trigo Lopez" />
+<meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+<meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+<meta name="Resource-type" content="Document" />
+<link rel="icon" href="images/faviconbandits.png" type="image/png" sizes="16x16" />
+<script>
+// Function of async loading
+function loadCSS(href, before, media) {
+    "use strict";
+    var ss = window.document.createElement("link");
+    var ref = before || window.document.getElementsByTagName("script")[0];
+    var sheets = window.document.styleSheets;
+    ss.rel = "stylesheet";
+    ss.href = href;
+    ss.media = "only x";
+
+    ref.parentNode.insertBefore(ss, ref);
+    ss.onloadcssdefined = function(cb) {
+        var defined;
+        for (var i = 0; i < sheets.length; i++) {
+            if (sheets[i].href && sheets[i].href === ss.href) {
+                defined = true;
+            }
+        }
+        if (defined) {
+            cb();
+        } else {
+            setTimeout(function() {
+                ss.onloadcssdefined(cb);
+            });
+        }
+    };
+    ss.onloadcssdefined(function() {
+        ss.media = media || "all";
+    });
+    return ss;
+}
+// Begin load CSS files...
+loadCSS("styles/font-awesome/css/font-awesome.min.css");
+loadCSS("styles/styles.css");
+loadCSS("styles/media-queries.css");
+loadCSS("styles/jquery.fullPage.css");
+loadCSS("styles/add-to-cart.css");
+loadCSS("styles/remodal.css");
+loadCSS("styles/remodal-default-theme.css");
+loadCSS("styles/jquery.peekabar.min.css");
+loadCSS("styles/pre-order.css");
+loadCSS("styles/shopping-cart.css");
+loadCSS("styles/examples.css");
+loadCSS("styles/bootstrap.css");
+loadCSS("styles/normalize.css");
+loadCSS("styles/base.css");
+loadCSS("styles/buttons.css");
+loadCSS("styles/demo.css");
+loadCSS("styles/dialog.css");
+loadCSS("styles/dialog-annie.css");
+loadCSS("styles/slick.css");
+loadCSS("styles/slick-theme.css");
+loadCSS("styles/tilteffect.css");
+loadCSS("styles/demotitleffect.css");
+loadCSS("styles/formValidation.min.css");
+</script>
+<style>
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(images/Preloader.gif) center no-repeat #fff;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #eed3d7;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 21px;
+    float: right;
+    clear: right
+}
+
+.alert-red {
+    color: #fff;
+    background-color: #DA4453
+}
+
+.alert-green {
+    color: #fff;
+    background-color: #37BC9B
+}
+
+.alert-blue {
+    color: #fff;
+    background-color: #4A89DC
+}
+
+.alert-yellow {
+    color: #fff;
+    background-color: #F6BB42
+}
+
+.alert-orange {
+    color: #fff;
+    background-color: #E9573F
+}
+
+span.spinner>.add,
+span.spinner>.sub {
+    display: block;
+    width: 100%;
+    line-height: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, .5);
+    text-align: center;
+    transition: .1s linear;
+    -o-transition: .1s linear;
+    -ms-transition: .1s linear;
+    -moz-transition: .1s linear;
+    -webkit-transition: .1s linear
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none
+}
+
+.video-close {
+    position: absolute;
+    right: 22px;
+    top: 16px;
+    font-size: 23px;
+    color: #fff
+}
+
+
+/*
+      Hide radio button (the round disc)
+      we will use just the label to create pushbutton effect
+    */
+</style>
+<!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.9/jquery.fullPage.min.js"></script>
+<script async type="text/javascript" src="scripts/slick.js"></script>
+<script async type="text/javascript" src="scripts/tiltfx.js"></script>
+<script async src="//openexchangerates.github.io/money.js/money.min.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+<script async type="text/javascript" src="scripts/ajaxq.js"></script>
+<script type="text/javascript" src="scripts/spin.js"></script>
+<script async type="text/javascript" src="scripts/ladda.js"></script>
+<script async type="text/javascript" src="scripts/dialogFx.js"></script>
+<script async type="text/javascript" src="scripts/jstorage.js"></script>
+<script async type="text/javascript" src="scripts/remodal.js"></script>
+<script async type="text/javascript" src="scripts/pre-order.js"></script>
+<script async type="text/javascript" src="scripts/shopping-cart.js"></script>
+<script async type="text/javascript" src="scripts/jquery.peekabar.min.js"></script>
+<script async type="text/javascript" src="scripts/jquery.dropdown.js"></script>
+<script async type="text/javascript" src="scripts/countUp.min.js"></script>
+<script async type="text/javascript" src="scripts/formvalidation/formValidation.min.js"></script>
+<script async type="text/javascript" src="scripts/formvalidation/framework/bootstrap.min.js"></script>
+<script>
+$(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut(500);
+});
+</script>

@@ -1,16 +1,5 @@
 $(function() {
 
-    // Validation Fn
-    $("#form-contact-us-desktop, #form-contact-us-mobile").validetta({
-        realTime: true,
-        display : 'inline',
-        errorTemplateClass : 'validetta-inline',
-        onValid : function( event ) {
-            event.preventDefault();
-            alert('Success');
-        }
-    });
-
     // Generate View Cart button (hidden by default)
     $('<button id="view-cart-link" class="btn view-cart-link button--rayen" data-text="VIEW CART" href="#cart" style="display:none;z-index:999999;">VIEW CART</button>').insertAfter('div[data-remodal-id="pre-order"]');
     // generate session reset btn if on local
@@ -64,7 +53,7 @@ $(function() {
         }
     });
 
-    $('.logo').click(function () {
+    $('.logo').click(function() {
         $.fn.fullpage.moveTo(1);
     });
 
@@ -122,7 +111,7 @@ $(function() {
 
     // Generate log
     function log(msg) {
-        var bar = new $.peekABar({
+        /*var bar = new $.peekABar({
             autohide: false,
             closeOnClick: true,
             html: msg
@@ -130,7 +119,8 @@ $(function() {
         // Display the log (development mode ONLY!)
         if (window.location.host == 'localhost') {
             bar.show();
-        }
+        }*/
+        console.log(msg);
     }
 
     // Init Reset
@@ -665,27 +655,83 @@ $(function() {
         location.reload(true);
     });
 
+
+    // Validation Function
+    $('#form-contact-us-desktop')
+        .formValidation({
+            framework: 'bootstrap',
+            fields: {
+                name: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Your name is required'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        emailAddress: {
+                            message: 'The value is not a valid email address'
+                        },
+                        regexp: {
+                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                            message: 'The value is not a valid email address'
+                        }
+                    }
+                },
+                message: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The message is required'
+                        },
+                        stringLength: {
+                            max: 700,
+                            message: 'The message must be less than 700 characters long'
+                        }
+                    }
+                }
+            }
+        })
+        .on('err.validator.fv', function(e, data) {
+            if (data.field === 'email') {
+                // The email field is not valid
+                data.element
+                    .data('fv.messages')
+                    // Hide all the messages
+                    .find('.help-block[data-fv-for="' + data.field + '"]').hide()
+                    // Show only message associated with current validator
+                    .filter('[data-fv-validator="' + data.validator + '"]').show();
+            }
+        })
+        .on('success.form.fv', function(e) {
+            // Prevent default form submission
+            e.preventDefault();
+            var data = {
+                name: $("#form-name-desktop").val(),
+                email: $("#form-email-desktop").val(),
+                message: $("#form-message-desktop").val()
+            };
+            log('Start doing AJAX post...');
+            $.ajax({
+                type: "POST",
+                url: "contact.php",
+                data: data,
+                success: function(data) {
+                    // show the response
+                    // Clear the form
+                    $form.formValidation('resetForm', true);
+                    log('AJAX POST succeeded!');
+                    $('#btn-submit-desktop > span.ladda-label').html("YOUR EMAIL IS SENT");
+                }
+            });
+        });
+
+
     // PHP Ajax submit buttons
     // Contact us submit button
     var l = Ladda.create(document.querySelector('#btn-submit-desktop'));
     // Send email handler
     $('#btn-submit-desktop').click(function() {
-        var data = {
-            name: $("#form-name-desktop").val(),
-            email: $("#form-email-desktop").val(),
-            message: $("#form-message-desktop").val()
-        };
-        l.start();
-        $.ajax({
-            type: "POST",
-            url: "contact.php",
-            data: data,
-            success: function(data) {
-                // show the response
-                $('#btn-submit-desktop > span.ladda-label').html("YOUR EMAIL IS SENT");
-                l.stop();
-            }
-        });
 
         // to prevent refreshing the whole page page
         return false;
@@ -730,9 +776,9 @@ $(function() {
                     });
             });*/
         m.stop();
-        
+
         $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
-        $('#btn-checkout').attr('data-text','THANK YOU FOR YOUR ORDER');
+        $('#btn-checkout').attr('data-text', 'THANK YOU FOR YOUR ORDER');
 
         return false;
     });

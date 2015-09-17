@@ -1,7 +1,6 @@
 <?php
 if($_POST){
     require 'mailer/Mandrill.php';
-
     try {
         $mandrill = new Mandrill('5O8bMd9RhEd7hrcSNqFfFg');
         $message = array(

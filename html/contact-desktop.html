@@ -1,0 +1,30 @@
+<div id="contact-us-desktop" class="dialog">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content">
+        <div id="dialog__content">
+            <form id="form-contact-us-desktop">
+                <h1 class="contact-us">CONTACT US</h1>
+                <!-- This container will be shown after sending new message -->
+                <div id="alertContainer" class="alert" style="display: none;"></div>
+                <!-- Fields container -->
+                <div class="form-group input-group">
+                    <input type="text" name="name" id="form-name-desktop" class="form-control" placeholder="What's your name?" aria-describedby="basic-addon1">
+                </div>
+                <br>
+                <div class="form-group input-group">
+                    <input type="text" name="email" id="form-email-desktop" class="form-control" placeholder="Type your email" aria-describedby="basic-addon1">
+                </div>
+                <br>
+                <div class="form-group input-group">
+                    <textarea name="message" id="form-message-desktop" class="form-control" placeholder="Your message here :)"></textarea>
+                </div>
+                <div class "form-group">
+                    <button type="submit" id="btn-submit-desktop" class="ladda-button submit-btn" data-style="expand-left">
+                        <span class="ladda-label">SUBMIT</span>
+                    </button>
+                </div>
+                <input type="hidden" id="contact-desktop-submit-status" value="none" />
+            </form>
+        </div>
+    </div>
+</div>
