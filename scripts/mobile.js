@@ -420,7 +420,6 @@ $(function() {
     $('.logo').show();
     genIcon('close');
 
-
     // Modal opening 
     $(document).on('opening', '.remodal', function() {
         // btn view cart hide
@@ -635,7 +634,7 @@ $(function() {
             })
             .done(function(data) {
                 // show the response
-                $('#btn-submit-mobile > span').html(data.status);
+                $('#btn-submit-mobile > span.ladda-label').html('EMAIL SENT!');
                 l.stop();
             });
         // to prevent refreshing the whole page page
@@ -679,6 +678,7 @@ $(function() {
                     });
             });*/
         m.stop();
+        
         $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
         $('#btn-checkout').attr('data-text','THANK YOU FOR YOUR ORDER');
 

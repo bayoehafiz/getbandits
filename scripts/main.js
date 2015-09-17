@@ -1,4 +1,16 @@
 $(function() {
+
+    // Validation Fn
+    $("#form-contact-us-desktop, #form-contact-us-mobile").validetta({
+        realTime: true,
+        display : 'inline',
+        errorTemplateClass : 'validetta-inline',
+        onValid : function( event ) {
+            event.preventDefault();
+            alert('Success');
+        }
+    });
+
     // Generate View Cart button (hidden by default)
     $('<button id="view-cart-link" class="btn view-cart-link button--rayen" data-text="VIEW CART" href="#cart" style="display:none;z-index:999999;">VIEW CART</button>').insertAfter('div[data-remodal-id="pre-order"]');
     // generate session reset btn if on local
@@ -665,15 +677,16 @@ $(function() {
         };
         l.start();
         $.ajax({
-                type: "POST",
-                url: "contact.php",
-                data: data
-            })
-            .done(function(data) {
+            type: "POST",
+            url: "contact.php",
+            data: data,
+            success: function(data) {
                 // show the response
-                $('#btn-submit-desktop > span').html("Your email is sent!");
+                $('#btn-submit-desktop > span.ladda-label').html("YOUR EMAIL IS SENT");
                 l.stop();
-            });
+            }
+        });
+
         // to prevent refreshing the whole page page
         return false;
     });
@@ -717,6 +730,7 @@ $(function() {
                     });
             });*/
         m.stop();
+        
         $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
         $('#btn-checkout').attr('data-text','THANK YOU FOR YOUR ORDER');
 
@@ -752,8 +766,6 @@ $(function() {
 
     var heightViewCartLink = ($_window.height() - 514) / 4;
 
-    //$('.view-cart-link').css('bottom', heightViewCartLink);
-
     // Window resize function
     $_window.resize(function() {
         var desktop = $('#btn-contact-us-desktop');
@@ -763,8 +775,6 @@ $(function() {
             $('.view-cart-link').css('bottom', '10px');
             $('.btn-order,.view-cart-link,.checkout-btn').removeClass('button--rayen');
 
-            // Contact us button handler
-            //mobile.attr('data-dialog', 'contact-us-mobile');
             //desktop.removeAttr('data-dialog');
             log('Desktop: ' + desktop.attr('data-dialog') + ', Mobile: ' + mobile.attr('data-dialog'));
 
@@ -775,8 +785,6 @@ $(function() {
             $('.view-cart-link').css('bottom', heightViewCartLink);
             $('.btn-order,.view-cart-link,.checkout-btn').addClass('button--rayen');
 
-            // Contact us button handler
-            //desktop.attr('data-dialog', 'contact-us-desktop');
             //mobile.removeAttr('data-dialog');
             log('Desktop: ' + desktop.attr('data-dialog') + ', Mobile: ' + mobile.attr('data-dialog'));
 
@@ -816,13 +824,6 @@ $(function() {
             }
         })
     });
-
-    /* (function() {
-        var dlgtrigger = document.querySelector('[data-dialog]'),
-            somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog')),
-            dlg = new DialogFx(somedialog);
-        dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-    })(); */
 
     // initiate dummy cart reset
     resetInit();
