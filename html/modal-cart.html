@@ -12,7 +12,7 @@
 <div id="cd-cart" style="z-index:1000;">
     <h2>SHOPPING CART </h2>
     <div class="wrapper">
-        <form method="post" id="add-to-cart-form" target="_self">
+        <form method="post" id="form-cart">
             <div class="currency_box" id="currency_box" style="text-align:center;display:none;">
                 <input type="radio" id="radio1" name="currency" value="USD" checked>
                 <label for="radio1">USD</label>
@@ -76,25 +76,25 @@
                         <p style="color:#fff;font-size:13px;text-align:center;margin-bottom: 20px;">Bandits™ glasses will start shipping on Mid October. To save yourself a pair of glasses, fill in your Name, Email, and City. We will be in touch soon.</p>
                     </div>
                     <div class="col-md-12">
-                        <div class="input-group">
-                            <input type="text" id="cart-name" class="form-control" placeholder="Your Name" aria-describedby="basic-addon1">
+                        <div class="form-group input-group">
+                            <input type="text" id="cart-name" class="form-control" placeholder="Your Name" required data-fv-notempty-message="Wait, what's your name?" pattern="[a-zA-Z0-9\s]+" data-fv-regexp-message="Your name can only consist of letters and space">
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="input-group">
-                            <input type="email" id="cart-email" class="form-control" placeholder="Your Email" aria-describedby="basic-addon1">
+                        <div class="form-group input-group">
+                            <input type="email" id="cart-email" class="form-control" placeholder="Your Email" required data-fv-notempty-message="Type in your email. We won't spam you :)" data-fv-emailaddress-message="This is not a valid email address">
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="input-group">
-                            <input type="text" id="cart-city" class="form-control" placeholder="Your City" aria-describedby="basic-addon1">
+                        <div class="form-group input-group">
+                            <input type="text" id="cart-city" class="form-control" placeholder="Your City" required data-fv-notempty-message="Wait, what's your name?" pattern="[a-zA-Z0-9\s]+" data-fv-regexp-message="City can only consist of letters and space">
                         </div>
                     </div>
                 </div>
             </div>
             <!-- cd-cart-items -->
             <div class="cd-cart-total">
-                <button id="btn-checkout" class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s" data-text="CONFIRM INTEREST" style="max-width:100%">
+                <button type="submit" id="btn-checkout" class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s" style="max-width:100%" disabled="disabled">
                     CONFIRM INTEREST
                 </button>
             </div>

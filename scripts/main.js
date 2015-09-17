@@ -10,6 +10,7 @@ $(function() {
             }
         });
 
+
     // Generate View Cart button (hidden by default)
     $('<button id="view-cart-link" class="btn view-cart-link button--rayen" data-text="VIEW CART" href="#cart" style="display:none;z-index:999999;">VIEW CART</button>').insertAfter('div[data-remodal-id="pre-order"]');
     // generate session reset btn if on local
@@ -135,7 +136,6 @@ $(function() {
 
     // Init Reset
     function resetInit() {
-        log('Running init reset..');
         $('#white-item').val(0);
         $('#white-amount').val(0);
         $('#white-total').html();
@@ -150,7 +150,6 @@ $(function() {
 
     // Dummy Reset cart fields
     function resetAll() {
-        log('Resetting cart...');
         $('#white-item').val(0);
         $('#white-total').html();
         $('#black-item').val(0);
@@ -260,7 +259,6 @@ $(function() {
             });
             sym = 'IDR';
         }
-        log('Changing currency into ' + sym + '...');
         // Apply changes
         setCurrency(sym, conv);
     });
@@ -311,7 +309,6 @@ $(function() {
         var aw = parseInt($('#white-amount').val());
         var ab = parseInt($('#black-amount').val());
         if ((aw == 0) && (ab == 0)) { // if there are no items to add
-            log('No item added');
             $('#white-list').hide();
             $('#black-list').hide();
             $('#currency_box, #form-preorder').hide();
@@ -346,14 +343,12 @@ $(function() {
     // Delete product in cart
     function delItem(item) {
         if (item == 'white') {
-            log('removing Pure White item...');
             $('#white-list').fadeOut();
             $('#white-amount').val(0);
             resetModal('white');
             // recalculating
             cartCounter();
         } else {
-            log('removing Solid Black item...');
             $('#black-list').fadeOut();
             $('#black-amount').val(0);
             resetModal('black');
@@ -364,7 +359,6 @@ $(function() {
 
     // Reset pre-order modal and notif counts
     function resetModal(type) {
-        log('resetting modal...')
         if (type == 'white') {
             $('#white-add').show();
             $('#white-added').hide();
@@ -448,7 +442,6 @@ $(function() {
 
 
     $(document).on('opening', '.remodal', function(e) {
-        log('Opening modal...');
         // check if cart is opened
         if ($('#cd-cart').hasClass('speed-in')) {
             $('#cd-cart').removeClass('speed-in');
@@ -473,7 +466,6 @@ $(function() {
             $('#view-cart-link').hide();
         }
 
-        log('generate CART icon!');
         genIcon('close');
         $('#cd-cart-trigger').attr('data-icon', 'cart');
     });
@@ -481,7 +473,6 @@ $(function() {
     // Modal on closing event handler
     $(document).on('closing', '.remodal', function(e) {
         // Reason: 'confirmation', 'cancellation'
-        log('Modal is closing...');
         $('.view-cart-link').hide();
         modal.close();
         $('#cd-shadow-layer').removeClass('is-visible');
@@ -589,7 +580,6 @@ $(function() {
 
     // Cart handling functions
     $('#cd-shadow-layer').click(function() {
-        log('click on shadow layer');
         if ($('#cd-cart').hasClass('speed-in')) {
             genIcon('cart');
         } else {
@@ -614,7 +604,6 @@ $(function() {
         // Do the logic only when cart is about to opened
         if ($('#cd-cart').hasClass('speed-in')) {
             $('#cd-shadow-layer').addClass('is-visible');
-            log('generate CLOSE icon!');
             genIcon('cart');
             resetAll(); // dummy reset
             addToCart(); // Let the magic begins...
@@ -625,13 +614,11 @@ $(function() {
 
     // View Cart Button
     $('#view-cart-link').click(function() {
-        log('Opening cart from modal..');
         $("#cd-cart-trigger").trigger("click");
     })
 
     // Close modal handler
     $('.close-btn').click(function() {
-        log('Close button pressed!');
         if ($_window.width() < 768) {
             $('.cart').show();
         }
@@ -655,7 +642,7 @@ $(function() {
         } else {
             o = $.jStorage.get('cur');
         }
-        log('### SESSIONS: <br/>- White: ' + m + ' <br/>- Black: ' + n + ' <br/>- Currency: ' + o);
+        log('### SESSIONS: White:' + m + '/Black:' + n + '/Currency:' + o + ' ###');
     })
     $('#btn-flush-session').click(function() {
         $.jStorage.flush();
@@ -674,7 +661,6 @@ $(function() {
             email: $("#form-email-desktop").val(),
             message: $("#form-message-desktop").val()
         };
-        log('Start doing AJAX post...');
         $.ajax({
             type: "POST",
             url: "contact.php",
@@ -778,19 +764,11 @@ $(function() {
             $('.view-cart-link').css('bottom', '10px');
             $('.btn-order,.view-cart-link,.checkout-btn').removeClass('button--rayen');
 
-            //desktop.removeAttr('data-dialog');
-            log('Desktop: ' + desktop.attr('data-dialog') + ', Mobile: ' + mobile.attr('data-dialog'));
-
-
             resize_function($_window.width());
 
         } else {
             $('.view-cart-link').css('bottom', heightViewCartLink);
             $('.btn-order,.view-cart-link,.checkout-btn').addClass('button--rayen');
-
-            //mobile.removeAttr('data-dialog');
-            log('Desktop: ' + desktop.attr('data-dialog') + ', Mobile: ' + mobile.attr('data-dialog'));
-
 
             resize_function("560px");
 
@@ -818,7 +796,6 @@ $(function() {
         })
 
         $('#dialog__close').click(function() {
-            log('About to close this damn dialog...!!!')
             var modal = $('#contact-us-mobile');
             if (modal.hasClass('dialog--open')) {
                 modal.removeClass('dialog--open');
