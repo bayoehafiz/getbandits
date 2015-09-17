@@ -768,7 +768,7 @@ figure.effect-lexi:hover {
     display: block;
 }
 .dialog .input-group .form-control {
-    margin-bottom: 26px;
+    margin-bottom: 10px;
     outline: none;
     height: 47px;
     background-color: #000;

@@ -1,5 +1,4 @@
 <div id="contact-us-desktop" class="dialog">
-    <div class="dialog__overlay"></div>
     <div class="dialog__content">
         <div id="dialog__content">
             <form id="form-contact-us-desktop">
@@ -8,23 +7,24 @@
                 <div id="alertContainer" class="alert" style="display: none;"></div>
                 <!-- Fields container -->
                 <div class="form-group input-group">
-                    <input type="text" name="name" id="form-name-desktop" class="form-control" placeholder="What's your name?" aria-describedby="basic-addon1">
+                    <input type="text" name="name" id="form-name-desktop" class="form-control" placeholder="What's your name?" required data-fv-notempty-message="Wait, what's your name?" pattern="[a-zA-Z0-9\s]+" data-fv-regexp-message="Your name can only consist of letters and space">
                 </div>
                 <br>
                 <div class="form-group input-group">
-                    <input type="text" name="email" id="form-email-desktop" class="form-control" placeholder="Type your email" aria-describedby="basic-addon1">
+                    <input type="email" name="email" id="form-email-desktop" class="form-control" placeholder="Type your email" required data-fv-notempty-message="Type in your email. We won't spam you :)" data-fv-emailaddress-message="This is not a valid email address">
                 </div>
                 <br>
                 <div class="form-group input-group">
-                    <textarea name="message" id="form-message-desktop" class="form-control" placeholder="Your message here :)"></textarea>
+                    <textarea name="message" id="form-message-desktop" class="form-control" placeholder="Your message here :)" required data-fv-notempty-message="Your need to type your message bro..." maxlength="699" data-fv-stringlength-message="Message must less than 700 chars" pattern="[a-z]{1,30}(,[a-z]{1,30})*" data-fv-regexp-message="Your message can only consist of letters, numbers and space"></textarea>
                 </div>
+                <br>
                 <div class "form-group">
-                    <button type="submit" id="btn-submit-desktop" class="ladda-button submit-btn" data-style="expand-left">
-                        <span class="ladda-label">SUBMIT</span>
+                    <button type="submit" id="btn-submit-desktop" class="submit-btn" disabled="disabled">
+                        SUBMIT
                     </button>
                 </div>
-                <input type="hidden" id="contact-desktop-submit-status" value="none" />
             </form>
         </div>
     </div>
+    <div class="dialog__overlay"></div>
 </div>

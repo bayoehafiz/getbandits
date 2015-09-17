@@ -21,8 +21,9 @@ if($_POST){
             'return_path_domain' => 'www.getbandits.com'
         );
         $async = false;
-        $result = $mandrill->messages->send($message, $async);
-        print_r($result);
+        $mandrill->messages->send($message, $async);
+        
+        echo 'done';
 
     } catch(Mandrill_Error $e) {
         // Mandrill errors are thrown as exceptions
