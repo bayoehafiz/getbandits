@@ -672,6 +672,7 @@ $(function() {
             });
         m.stop();
         $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
+        $('#btn-checkout').attr('data-text','THANK YOU FOR YOUR ORDER');
 
         return false;
     });
