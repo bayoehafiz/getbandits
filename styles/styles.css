@@ -155,6 +155,7 @@ h1#title_section0 span {
 
 .logo {
     width: 150px;
+    cursor: pointer;
 }
 
 .logo img {

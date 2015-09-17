@@ -40,6 +40,7 @@ $(function() {
                 $('.btn-order-fixed button.btn-order').show();
                 $('.btn-order-fixed button.btn-contact-us').hide();
             }
+
         },
         afterLoad: function(anchorLink, index) {
             var loadedSection = $(this);
@@ -49,6 +50,10 @@ $(function() {
                 $('.btn-order-fixed button.btn-contact-us').show();
             };
         }
+    });
+
+    $('.logo').click(function () {
+        $.fn.fullpage.moveTo(1);
     });
 
     $('.slide-content-bandits').slick({
@@ -72,6 +77,7 @@ $(function() {
                     if (el.val() > parseInt(el.attr('min'))) {
                         el.val(function(i, oldval) {
                             return --oldval;
+
                         });
                         var type = el.closest('li').attr('id');
                         log('Reducing ' + type + ' item qty into ' + el.val());
@@ -677,6 +683,7 @@ $(function() {
     var m = Ladda.create(document.querySelector('#btn-checkout'));
     // Send email handler
     $('#btn-checkout').click(function() {
+
         var data = {
             name: $("#cart-name").val(),
             email: $("#cart-email").val(),
@@ -685,7 +692,7 @@ $(function() {
             black: $("#black-item").val()
         };
         m.start();
-        $.ajax({
+        /*$.ajax({
                 type: "POST",
                 url: "pre_order.php",
                 data: data
@@ -708,7 +715,7 @@ $(function() {
                                 log(msg3);
                             });
                     });
-            });
+            });*/
         m.stop();
         $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
         $('#btn-checkout').attr('data-text','THANK YOU FOR YOUR ORDER');
