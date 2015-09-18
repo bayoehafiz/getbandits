@@ -709,12 +709,8 @@ $(function() {
         return false;
     });
 
-
-    // Preorder checkout submit button
-    var m = Ladda.create(document.querySelector('#btn-checkout'));
     // Send email handler
     $('#btn-checkout').click(function() {
-
         var data = {
             name: $("#cart-name").val(),
             email: $("#cart-email").val(),
@@ -722,8 +718,7 @@ $(function() {
             white: $("#white-item").val(),
             black: $("#black-item").val()
         };
-        m.start();
-        /*$.ajax({
+        $.ajax({
                 type: "POST",
                 url: "pre_order.php",
                 data: data
@@ -746,8 +741,7 @@ $(function() {
                                 log(msg3);
                             });
                     });
-            });*/
-        m.stop();
+            });
 
         $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
         $('#btn-checkout').attr('data-text', 'THANK YOU FOR YOUR ORDER');
