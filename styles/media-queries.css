@@ -642,7 +642,9 @@
         margin-left: auto!important;
         margin-right: auto!important;
     }
-
+    #btn-checkout{
+        position: relative;
+    }
 
     #cd-cart .cd-cart-total{
         padding-top: 2em!important
