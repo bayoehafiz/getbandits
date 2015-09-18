@@ -643,8 +643,7 @@
         margin-right: auto!important;
     }
     #btn-checkout{
-        position: inherit;
-        width: 100%!important
+        position: relative;
     }
 
     #cd-cart .cd-cart-total{
