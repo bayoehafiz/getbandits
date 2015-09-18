@@ -1,16 +1,5 @@
 $(function() {
 
-    // Validation Function
-    $('#form-contact-us-desktop').formValidation({
-            framework: 'bootstrap'
-        })
-        .on('success.field.fv', function(e, data) {
-            if (data.fv.getInvalidFields().length > 0) { // There is invalid field
-                data.fv.disableSubmitButtons(true);
-            }
-        });
-
-
     // Generate View Cart button (hidden by default)
     $('<button id="view-cart-link" class="btn view-cart-link button--rayen" data-text="VIEW CART" href="#cart" style="display:none;z-index:999999;">VIEW CART</button>').insertAfter('div[data-remodal-id="pre-order"]');
     // generate session reset btn if on local
@@ -119,6 +108,29 @@ $(function() {
         };
     })(jQuery);
     $('input[type=number]').spinner();
+
+
+    // Validation Function
+    $('#form-contact-us-desktop')
+        .formValidation({
+            framework: 'bootstrap'
+        })
+        .on('success.field.fv', function(e, data) {
+            if (data.fv.getInvalidFields().length > 0) { // There is invalid field
+                data.fv.disableSubmitButtons(true);
+            }
+        });
+
+    $('#form-cart')
+        .formValidation({
+            framework: 'bootstrap'
+        })
+        .on('success.field.fv', function(e, data) {
+            if (data.fv.getInvalidFields().length > 0) { // There is invalid field
+                data.fv.disableSubmitButtons(true);
+            }
+        });
+
 
     // Generate log
     function log(msg) {
