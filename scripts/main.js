@@ -1,16 +1,5 @@
 $(function() {
 
-    // Validation Function
-    $('#form-contact-us-desktop').formValidation({
-            framework: 'bootstrap'
-        })
-        .on('success.field.fv', function(e, data) {
-            if (data.fv.getInvalidFields().length > 0) {    // There is invalid field
-                data.fv.disableSubmitButtons(true);
-            }
-        });
-
-
     // Generate View Cart button (hidden by default)
     $('<button id="view-cart-link" class="btn view-cart-link button--rayen" data-text="VIEW CART" href="#cart" style="display:none;z-index:999999;">VIEW CART</button>').insertAfter('div[data-remodal-id="pre-order"]');
     // generate session reset btn if on local
@@ -119,6 +108,29 @@ $(function() {
         };
     })(jQuery);
     $('input[type=number]').spinner();
+
+
+    // Validation Function
+    $('#form-contact-us-desktop')
+        .formValidation({
+            framework: 'bootstrap'
+        })
+        .on('success.field.fv', function(e, data) {
+            if (data.fv.getInvalidFields().length > 0) { // There is invalid field
+                data.fv.disableSubmitButtons(true);
+            }
+        });
+
+    $('#form-cart')
+        .formValidation({
+            framework: 'bootstrap'
+        })
+        .on('success.field.fv', function(e, data) {
+            if (data.fv.getInvalidFields().length > 0) { // There is invalid field
+                data.fv.disableSubmitButtons(true);
+            }
+        });
+
 
     // Generate log
     function log(msg) {
@@ -653,6 +665,23 @@ $(function() {
     });
 
 
+    // trigger Contact Us button click
+    $('#btn-contact-us-desktop').click(function() {
+        $('#contact-us-desktop').addClass('dialog--open');
+    });
+
+    $('#contact-us-desktop > div.dialog__overlay').click(function() {
+        var modal = $('#contact-us-desktop');
+        if (modal.hasClass('dialog--open')) {
+            modal.removeClass('dialog--open');
+            modal.addClass('dialog__close');
+        } else if (modal.hasClass('dialog__close')) {
+            modal.removeClass('dialog--close');
+            modal.addClass('open');
+        }
+    })
+
+
     // PHP Ajax submit buttons
     // Send email handler
     $('#btn-submit-desktop').click(function() {
@@ -680,12 +709,8 @@ $(function() {
         return false;
     });
 
-
-    // Preorder checkout submit button
-    var m = Ladda.create(document.querySelector('#btn-checkout'));
     // Send email handler
     $('#btn-checkout').click(function() {
-
         var data = {
             name: $("#cart-name").val(),
             email: $("#cart-email").val(),
@@ -693,8 +718,7 @@ $(function() {
             white: $("#white-item").val(),
             black: $("#black-item").val()
         };
-        m.start();
-        /*$.ajax({
+        $.ajax({
                 type: "POST",
                 url: "pre_order.php",
                 data: data
@@ -717,8 +741,7 @@ $(function() {
                                 log(msg3);
                             });
                     });
-            });*/
-        m.stop();
+            });
 
         $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
         $('#btn-checkout').attr('data-text', 'THANK YOU FOR YOUR ORDER');
