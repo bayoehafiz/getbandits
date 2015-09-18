@@ -43,6 +43,7 @@ loadCSS("styles/font-awesome/css/font-awesome.min.css");
 loadCSS("styles/styles.css");
 loadCSS("styles/media-queries.css");
 loadCSS("styles/jquery.fullPage.css");
+loadCSS("styles/formValidation.min.css");
 loadCSS("styles/add-to-cart.css");
 loadCSS("styles/remodal.css");
 loadCSS("styles/remodal-default-theme.css");
@@ -61,7 +62,6 @@ loadCSS("styles/slick.css");
 loadCSS("styles/slick-theme.css");
 loadCSS("styles/tilteffect.css");
 loadCSS("styles/demotitleffect.css");
-loadCSS("styles/formValidation.min.css");
 </script>
 <style>
 .no-js #loader {
@@ -150,18 +150,8 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 23px;
     color: #fff
 }
-
-
-/*
-      Hide radio button (the round disc)
-      we will use just the label to create pushbutton effect
-    */
 </style>
-<!--[if IE]>
-        <script type="text/javascript">
-             var console = { log: function() {} };
-        </script>
-    <![endif]-->
+
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -184,10 +174,42 @@ input[type=number]::-webkit-outer-spin-button {
 <script type="text/javascript" src="scripts/countUp.min.js"></script>
 <script type="text/javascript" src="scripts/formvalidation/formValidation.min.js"></script>
 <script type="text/javascript" src="scripts/formvalidation/framework/bootstrap.min.js"></script>
-<script type="text/javascript" src="scripts/formvalidation/addon/reCaptcha2.js"></script>
+
 <script>
+//Function to load external script
+function loadScript(url, callback) {
+    var script = document.createElement("script")
+    script.type = "text/javascript";
+    if (script.readyState) { //IE
+        script.onreadystatechange = function() {
+            if (script.readyState == "loaded" || script.readyState == "complete") {
+                script.onreadystatechange = null;
+                callback();
+            }
+        };
+    } else { //Others
+        script.onload = function() {
+            callback();
+        };
+    }
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+}
+
+if (screen.size < 768) { // Load when on mobile only
+    loadScript("//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js", function() {
+        console.log('jquery.mobile-1.4.2.min.js loaded!');
+    });
+    loadScript("//dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog2.js", function() {
+        console.log('jquery.mobile.simpledialog2.js loaded!');
+    });
+    loadScript("//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js", function() {
+        console.log('jquery.validate.min.js loaded!');
+    });
+}
+
 $(window).load(function() {
-    // Animate loader off screen
+    // Page preloader
     $(".se-pre-con").fadeOut(500);
 });
 </script>

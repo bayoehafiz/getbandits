@@ -5,7 +5,7 @@ $(function() {
             framework: 'bootstrap'
         })
         .on('success.field.fv', function(e, data) {
-            if (data.fv.getInvalidFields().length > 0) {    // There is invalid field
+            if (data.fv.getInvalidFields().length > 0) { // There is invalid field
                 data.fv.disableSubmitButtons(true);
             }
         });
@@ -651,6 +651,23 @@ $(function() {
     $('#btn-page-reload').click(function() {
         location.reload(true);
     });
+
+
+    // trigger Contact Us button click
+    $('#btn-contact-us-desktop').click(function() {
+        $('#contact-us-desktop').addClass('dialog--open');
+    });
+
+    $('#contact-us-desktop > div.dialog__overlay').click(function() {
+        var modal = $('#contact-us-desktop');
+        if (modal.hasClass('dialog--open')) {
+            modal.removeClass('dialog--open');
+            modal.addClass('dialog__close');
+        } else if (modal.hasClass('dialog__close')) {
+            modal.removeClass('dialog--close');
+            modal.addClass('open');
+        }
+    })
 
 
     // PHP Ajax submit buttons

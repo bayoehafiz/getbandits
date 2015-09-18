@@ -1,13 +1,38 @@
 $(function() {
     // Validation Function
-    $('#form-contact-us-desktop').formValidation({
-            framework: 'bootstrap'
-        })
-        .on('success.field.fv', function(e, data) {
-            if (data.fv.getInvalidFields().length > 0) { // There is invalid field
-                data.fv.disableSubmitButtons(true);
+    /*$('#form-contact-us-mobile').validate({
+        rules: {
+            name: {
+                required: true
+            },
+            email: {
+                required: true
+            },
+            city: {
+                required: true
             }
-        });
+        },
+        messages: {
+            name: {
+                required: "What's you name?"
+            },
+            email: {
+                required: "Fill in your email.."
+            },
+            city: {
+                required: "Where are you?"
+            }
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().prev());
+        },
+        submitHandler: function(form) {
+            $(':mobile-pagecontainer').pagecontainer('change', '#success', {
+                reload: false
+            });
+            return false;
+        }
+    });*/
 
 
     $_window = $(window);
@@ -627,6 +652,23 @@ $(function() {
     $('.bg-overlay-video').click(function() {
         $(this).hide();
     });
+
+
+    // Contact us button trigger
+    $('#btn-contact-us-mobile').click(function() {
+        $('#contact-us-mobile').addClass('dialog--open');
+    })
+
+    $('#dialog__close').click(function() {
+        var modal = $('#contact-us-mobile');
+        if (modal.hasClass('dialog--open')) {
+            modal.removeClass('dialog--open');
+            modal.addClass('dialog__close');
+        } else if (modal.hasClass('dialog__close')) {
+            modal.removeClass('dialog--close');
+            modal.addClass('open');
+        }
+    })
 
     // Contact us submit button
     var l = Ladda.create(document.querySelector('#btn-submit-mobile'));
