@@ -644,6 +644,7 @@
     }
     #btn-checkout{
         position: relative;
+        width: 100%!important
     }
 
     #cd-cart .cd-cart-total{
