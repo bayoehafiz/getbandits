@@ -6,7 +6,12 @@
 </head>
 
 <body>
+    <!-- Google Analytic tracking -->
+    <?php include_once("analyticstracking.php") ?>
+
+    <!-- Body section -->
     <?php include('html/body.html'); ?>
+    <!-- EOF Body section -->
 
     <!-- Pre Order Modal -->
     <?php include('html/modal-pre-order.html'); ?>
