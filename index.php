@@ -6,10 +6,6 @@
 </head>
 
 <body>
-    <!-- Google property -->
-    <?php include_once("google_tagmanager.php") ?>
-    <?php include_once("google_analyticstracking.php") ?>
-
     <!-- Body section -->
     <?php include('html/body.html'); ?>
     <!-- EOF Body section -->
