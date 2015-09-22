@@ -5,31 +5,34 @@
     <?php include("html/header.html"); ?>
 </head>
 
-<body>
-    <!-- Body section -->
-    <?php include('html/body.html'); ?>
-    <!-- EOF Body section -->
+<body class="pre-loder">
+    <div id="ip-container" class="ip-container">
+        <!-- initial header -->
+        <header class="ip-header">
+            <?php include('html/body.header.html'); ?>
+        </header>
 
-    <!-- Pre Order Modal -->
-    <?php include('html/modal-pre-order.html'); ?>
-    <!-- EOF Pre Order Modal -->
+        <!-- main content -->
+        <div class="ip-main">
+            <?php include('html/body.main.html'); ?>
+            
+            <!-- Pre Order Modal -->
+            <?php include('html/modal-pre-order.html'); ?>
 
-    <!-- Cart DIV -->
-    <?php include('html/modal-cart.html'); ?>
-    <!-- EOF Cart DIV -->
+            <!-- Cart DIV -->
+            <?php include('html/modal-cart.html'); ?>
 
-    <!-- Footer -->
-    <?php include('html/footer.html'); ?>
-    <!-- EOF Footer -->
+            <!-- Footer -->
+            <?php include('html/footer.html'); ?>
 
-    <!-- Contact us modal -->
-    <?php include('html/contact-desktop.html'); ?>
-    <?php include('html/contact-mobile.html'); ?>
-    <!-- EOF Contact us modal -->
-    
-    <!-- Scripts section -->
-    <?php include('html/scripts.html'); ?>
-    <!-- EOF Scripts section -->
+            <!-- Contact us modal -->
+            <?php include('html/contact-desktop.html'); ?>
+            <?php include('html/contact-mobile.html'); ?>
+            
+            <!-- Scripts section -->
+            <?php include('html/scripts.html'); ?>
+        </div>
+    </div><!-- /container -->
 </body>
 
 </html>
