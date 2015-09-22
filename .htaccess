@@ -1,12 +1,6 @@
 Options +MultiViews
 RewriteEngine On
 RewriteBase /
-RewriteCond %{HTTP_HOST} !=localhost
-RewriteCond %{HTTP_HOST} !=127.0.0.1
-RewriteCond %{REMOTE_ADDR} !=127.0.0.1
-RewriteCond %{REMOTE_ADDR} !=::1
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
