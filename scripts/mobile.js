@@ -327,7 +327,7 @@ $(function() {
                 $('#cd-cart-trigger').addClass('items-added').find('span').html(t);
             }
             $('.cd-cart-total').fadeIn();
-            $('#form-preorder').fadeIn();
+            $('#currency_box, #form-preorder').fadeIn();
             $('#no-list').hide();
             // Chaeck if modal is opened
             if (modal.getState() == 'opened') {
@@ -341,7 +341,7 @@ $(function() {
             $('#add-to-cart-form').attr('action', '');
             $('.cd-cart').removeClass('items-added');
             $('#view-cart-link').hide();
-            $('#form-preorder').hide();
+            $('#currency_box, #form-preorder').hide();
             $('#no-list').fadeIn();
         }
 
@@ -371,7 +371,7 @@ $(function() {
             $('#white-list').hide();
             $('#black-list').hide();
             $('.cd-cart-total').hide();
-            $('#form-preorder').hide();
+            $('#currency_box, #form-preorder').hide();
         } else {
             $('#no-list').hide();
             $('#white-list').hide();
@@ -392,7 +392,7 @@ $(function() {
                 $('#black-item').val(ab);
                 $('#black-total').text(btot);
             }
-            $('#form-preorder').fadeIn();
+            $('#currency_box, #form-preorder').fadeIn();
             cartCounter();
         }
     }

@@ -5,34 +5,35 @@
     <?php include("html/header.html"); ?>
 </head>
 
-<body class="pre-loder">
-    <div id="ip-container" class="ip-container">
-        <!-- initial header -->
-        <header class="ip-header">
-            <?php include('html/body.header.html'); ?>
-        </header>
+<body>
+    <!-- Google property -->
+    <?php include_once("google_tagmanager.php") ?>
+    <?php include_once("google_analyticstracking.php") ?>
 
-        <!-- main content -->
-        <div class="ip-main">
-            <?php include('html/body.main.html'); ?>
-            
-            <!-- Pre Order Modal -->
-            <?php include('html/modal-pre-order.html'); ?>
+    <!-- Body section -->
+    <?php include('html/body.html'); ?>
+    <!-- EOF Body section -->
 
-            <!-- Cart DIV -->
-            <?php include('html/modal-cart.html'); ?>
+    <!-- Pre Order Modal -->
+    <?php include('html/modal-pre-order.html'); ?>
+    <!-- EOF Pre Order Modal -->
 
-            <!-- Footer -->
-            <?php include('html/footer.html'); ?>
+    <!-- Cart DIV -->
+    <?php include('html/modal-cart.html'); ?>
+    <!-- EOF Cart DIV -->
 
-            <!-- Contact us modal -->
-            <?php include('html/contact-desktop.html'); ?>
-            <?php include('html/contact-mobile.html'); ?>
-            
-            <!-- Scripts section -->
-            <?php include('html/scripts.html'); ?>
-        </div>
-    </div><!-- /container -->
+    <!-- Footer -->
+    <?php include('html/footer.html'); ?>
+    <!-- EOF Footer -->
+
+    <!-- Contact us modal -->
+    <?php include('html/contact-desktop.html'); ?>
+    <?php include('html/contact-mobile.html'); ?>
+    <!-- EOF Contact us modal -->
+    
+    <!-- Scripts section -->
+    <?php include('html/scripts.html'); ?>
+    <!-- EOF Scripts section -->
 </body>
 
 </html>
