@@ -61,7 +61,7 @@ $(function() {
         autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
-        dotsClass: 'slick-dots'
+        dotsClass: 'slick-dots',
     });
 
     // Initiate qty spinner

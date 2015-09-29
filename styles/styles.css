@@ -241,6 +241,7 @@ h1#title_section0 span {
 .slide-content-bandits .bg-content {
     width: 100%;
     height: 100%;
+    display: table;
 }
 
 .slide-content-bandits .bg-content img {
@@ -886,5 +887,9 @@ figure.effect-lexi:hover {
     text-align: center;
     width: 100%;
     font-size: 17px;
+}
+
+.grid figure h2 span{
+    font-family: gotham_bold;
 }
 
