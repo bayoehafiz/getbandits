@@ -95,6 +95,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .preloader_svg p {
+        bottom: 10%
+    }
     .shipping-mid{
         top: -30%;
         font-size: 15px;
