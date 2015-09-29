@@ -893,3 +893,24 @@ figure.effect-lexi:hover {
     font-family: gotham_bold;
 }
 
+.preloader_svg {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background-color: #000;
+    display: table;
+}
+.preloader_svg svg{
+  display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+

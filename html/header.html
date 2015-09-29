@@ -76,97 +76,109 @@ loadCSS("styles/demotitleffect.css");
 }
 
 .path {
-  stroke-dasharray: 1100;
-  /*stroke-dashoffset: 1000;*/
-  animation: dash 2s linear alternate infinite;
-  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-   animation-delay: 1s;
-  animation-iteration-count: 1;
+    stroke-dasharray: 1100;
+    /*stroke-dashoffset: 1000;*/
+    animation: dash 2s linear alternate infinite;
+    -webkit-animation-delay: 1s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 1s;
+    animation-iteration-count: 1;
 }
 
-.line{
-  /*stroke-dashoffset: 1000;*/
-  animation: dash_line 4s linear alternate infinite;
-  opacity:0;
+.line {
+    /*stroke-dashoffset: 1000;*/
+    animation: dash_line 4s linear alternate infinite;
+    opacity: 0;
 }
 
-.line1{
-  -webkit-animation-delay: 4.1s; /* Chrome, Safari, Opera */
-  animation-delay: 4.1s;
+.line1 {
+    -webkit-animation-delay: 4.1s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 4.1s;
 }
 
-.line2{
-  -webkit-animation-delay: 4s; /* Chrome, Safari, Opera */
-  animation-delay: 4s;
+.line2 {
+    -webkit-animation-delay: 4s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 4s;
 }
 
-.line3{
-  -webkit-animation-delay: 3.9s; /* Chrome, Safari, Opera */
-  animation-delay: 3.9s;
+.line3 {
+    -webkit-animation-delay: 3.9s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3.9s;
 }
 
-.line4{
-  -webkit-animation-delay: 3.8s; /* Chrome, Safari, Opera */
-  animation-delay: 3.8s;
+.line4 {
+    -webkit-animation-delay: 3.8s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3.8s;
 }
 
-.line5{
-  -webkit-animation-delay: 3.7s; /* Chrome, Safari, Opera */
-  animation-delay: 3.7s;
+.line5 {
+    -webkit-animation-delay: 3.7s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3.7s;
 }
 
-.line6{
-  -webkit-animation-delay: 3.6s; /* Chrome, Safari, Opera */
-  animation-delay: 3.6s;
+.line6 {
+    -webkit-animation-delay: 3.6s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3.6s;
 }
 
-.line7{
-  -webkit-animation-delay: 3.5s; /* Chrome, Safari, Opera */
-  animation-delay: 3.5s;
+.line7 {
+    -webkit-animation-delay: 3.5s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3.5s;
 }
 
-.line8{
-  -webkit-animation-delay: 3.4s; /* Chrome, Safari, Opera */
-  animation-delay: 3.4s;
+.line8 {
+    -webkit-animation-delay: 3.4s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3.4s;
 }
 
-.line9{
-  -webkit-animation-delay: 3.3s; /* Chrome, Safari, Opera */
-  animation-delay: 3.3s;
+.line9 {
+    -webkit-animation-delay: 3.3s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3.3s;
 }
 
-.line10{
-  -webkit-animation-delay: 3.2s; /* Chrome, Safari, Opera */
-  animation-delay: 3.2s;
+.line10 {
+    -webkit-animation-delay: 3.2s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3.2s;
 }
 
-.line11{
-  -webkit-animation-delay: 3.1s; /* Chrome, Safari, Opera */
-  animation-delay: 3.1s;
+.line11 {
+    -webkit-animation-delay: 3.1s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3.1s;
 }
 
-.line12{
-  -webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
-  animation-delay: 3s;
+.line12 {
+    -webkit-animation-delay: 3s;
+    /* Chrome, Safari, Opera */
+    animation-delay: 3s;
 }
-
 
 @keyframes dash {
-  from {
-    stroke-dashoffset: 1100;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+    from {
+        stroke-dashoffset: 1100;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 @keyframes dash_line {
-  from {
-    opacity:0.8;
-  }
-  to {
-    opacity:1;
-  }
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .se-pre-con {
@@ -246,7 +258,6 @@ input[type=number]::-webkit-outer-spin-button {
     color: #fff
 }
 </style>
-
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -269,7 +280,6 @@ input[type=number]::-webkit-outer-spin-button {
 <script type="text/javascript" src="scripts/countUp.min.js"></script>
 <script type="text/javascript" src="scripts/formvalidation/formValidation.min.js"></script>
 <script type="text/javascript" src="scripts/formvalidation/framework/bootstrap.min.js"></script>
-
 <script>
 //Function to load external script
 function loadScript(url, callback) {
@@ -306,5 +316,6 @@ if (screen.size < 768) { // Load when on mobile only
 $(window).load(function() {
     // Page preloader
     $(".se-pre-con").fadeOut(500);
+    $(".preloader_svg").fadeOut(500);
 });
 </script>
