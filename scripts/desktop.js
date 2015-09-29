@@ -835,5 +835,5 @@ $(function() {
     // initiate session (if there is/are any session(s))
     putSession();
     // Status
-    log('Main.js loaded!');
+    log('DESKTOP.js loaded!');
 });
