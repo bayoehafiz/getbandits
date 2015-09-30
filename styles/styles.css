@@ -8,6 +8,11 @@
     src: url(../fonts/gotham/Gotham-Book.otf);
 }
 
+@font-face {
+    font-family: gotham_bold;
+    src: url(../fonts/gotham/Gotham-Bold.otf);
+}
+
 body {
     font-family: gotham_book!important;
 }
@@ -975,7 +980,8 @@ figure.effect-lexi:hover {
 }
 .preloader_svg p {
     text-align: center;
-    font-size: 20px;
+    font-family: gotham_bold;
+    font-size: 25px;
     color: #FFFFFF;
     position: absolute;
     bottom: 10%;
