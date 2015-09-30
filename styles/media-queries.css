@@ -95,6 +95,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .preloader_svg svg{
+        width: 50%;
+    }
     .preloader_svg p {
         bottom: 10%
     }
