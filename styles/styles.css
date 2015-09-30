@@ -887,7 +887,7 @@ figure.effect-lexi:hover {
 
 
 .path {
-    stroke-dasharray: 1100;
+    stroke-dasharray: 1200;
     /*stroke-dashoffset: 1000;*/
     animation: dash 5s linear alternate infinite;
     -webkit-animation-delay: 0s;
@@ -975,7 +975,7 @@ figure.effect-lexi:hover {
 
 @keyframes dash {
     from {
-        stroke-dashoffset: 1100;
+        stroke-dashoffset: 1200;
     }
     to {
         stroke-dashoffset: 0;
