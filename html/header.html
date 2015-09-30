@@ -153,6 +153,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 </style>
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+  $(window).load(function() {
+      // Page preloader
+      //$(".se-pre-con").fadeOut(500);
+      $(".preloader_svg").fadeOut(1000);
+  });
+</script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
@@ -206,12 +213,4 @@ if (screen.size < 768) { // Load when on mobile only
         console.log('jquery.validate.min.js loaded!');
     });
 }
-
-
-$(window).load(function() {
-    // Page preloader
-    $(".se-pre-con").fadeOut(500);
-    $(".preloader_svg").fadeOut(1000);
-});
-
 </script>
