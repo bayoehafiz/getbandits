@@ -871,8 +871,8 @@ figure.effect-lexi:hover {
 
 .line {
     /*stroke-dashoffset: 1000;*/
-    -webkit-animation: dash_line 5s linear alternate infinite;
-    animation: dash_line 5s linear alternate infinite;
+    -webkit-animation: dash_line 7s linear alternate infinite;
+    animation: dash_line 7s linear alternate infinite;
     opacity: 0;
 }
 
