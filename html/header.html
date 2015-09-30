@@ -156,8 +156,11 @@ input[type=number]::-webkit-outer-spin-button {
 <script type="text/javascript">
 $(window).load(function() {
     // Page preloader
-    $(".se-pre-con").fadeOut(500);
-    $(".preloader_svg").fadeOut(00);
+    //$(".se-pre-con").fadeOut(500);
+    setTimeout(function () {
+      $(".preloader_svg").fadeOut(500);
+    }, 10000);
+    
 });
 </script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
