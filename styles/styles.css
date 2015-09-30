@@ -15,8 +15,6 @@
 
 body {
     font-family: gotham_book!important;
-    -webkit-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in;
 }
 
 #bandits-email {
@@ -866,12 +864,9 @@ figure.effect-lexi:hover {
 .path {
     stroke-dasharray: 1200;
     /*stroke-dashoffset: 1000;*/
-    -webkit-animation: dash 5s linear alternate infinite;
-    animation: dash 5s linear alternate infinite;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-trasition:stroke-dashoffset .4s linear;
-    trasition:stroke-dashoffset .4s linear;
+    -webkit-animation: dash 9s linear alternate infinite;
+    animation: dash 9s linear alternate infinite;
+    animation-iteration-count: 1;
 }
 
 .line {
