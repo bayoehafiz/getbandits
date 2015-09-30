@@ -26,6 +26,7 @@ $(function() {
         onLeave: function(index, nextIndex, direction) {
             var leavingSection = $(this);
 
+          
 
             if (index == 2 && direction == 'up') {
                 $('.btn-order-fixed button.btn-order').show();

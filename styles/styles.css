@@ -15,6 +15,8 @@
 
 body {
     font-family: gotham_book!important;
+    -webkit-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
 }
 
 #bandits-email {
@@ -868,6 +870,8 @@ figure.effect-lexi:hover {
     animation: dash 5s linear alternate infinite;
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
+    -webkit-trasition:stroke-dashoffset .4s linear;
+    trasition:stroke-dashoffset .4s linear;
 }
 
 .line {
@@ -1016,4 +1020,25 @@ figure.effect-lexi:hover {
     margin-right: auto;
     left: 0;
     right: 0
+}
+
+
+.preparing-party{
+    opacity: 0;
+    -webkit-animation: text_transition 1.5s linear alternate infinite;
+    animation: text_transition 1.5s linear alternate infinite;
+}
+
+@keyframes text_transition {
+    0% {
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
