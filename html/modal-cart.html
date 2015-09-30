@@ -68,36 +68,16 @@
             </li>
         </ul>
         <p id="cart-total" style="display:none"><span id="cart-total"></span></p>
-        <div id="form-preorder" style="display:none;">
-            <form method="post" id="form-cart">
-                <div class="row">
-                    <!-- This container will be shown after sending new message -->
-                    <div id="alertContainer" class="alert" style="display: none;"></div>
-                    <div class="col-md-12">
-                        <p style="color:#fff;font-size:13px;text-align:center;margin-bottom: 20px;">Bandits™ glasses will start shipping on Mid October. To save yourself a pair of glasses, fill in your Name, Email, and City. We will be in touch soon.</p>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group input-group">
-                            <input type="text" name="name" id="cart-name" class="form-control" placeholder="Your Name" required data-fv-notempty-message="WAIT, WHAT'S YOUR NAME BRO?" pattern="[a-zA-Z0-9\s]+" data-fv-regexp-message="Your name can only consist of letters and space">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group input-group">
-                            <input type="email" name="email" id="cart-email" class="form-control" placeholder="Your Email" required data-fv-notempty-message="TYPE IN YOUR EMAIL, WE WON'T SPAM YOU :)" data-fv-emailaddress-message="This is not a valid email address">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group input-group">
-                            <input type="text" name="city" id="cart-city" class="form-control" placeholder="Your City" required data-fv-notempty-message="WAIT, WHAT'S YOUR CITY?" pattern="[a-zA-Z0-9\s]+" data-fv-regexp-message="City can only consist of letters and space">
-                        </div>
-                    </div>
-                </div>
-                <div class="cd-cart-total">
-                    <button type="submit" id="btn-checkout" class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s" data-text="CONFIRM INTEREST" style="max-width:100%" disabled="disabled">
-                        CONFIRM INTEREST
-                    </button>
-                </div>
-            </form>
+        <div style="display:none;">
+            <div class="cd-cart-total">
+                <p id="cart-total"><span id="cart-total"></span></p>
+                <p class="shipping">
+                    Shipping and tax are included.
+                </p>
+                <button type="submit" id="btn-checkout" class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s" data-text="CONFIRM INTEREST" style="max-width:100%" disabled="disabled">
+                    CONFIRM INTEREST
+                </button>
+            </div>
         </div>
         <!-- cd-cart-total -->
     </div>
