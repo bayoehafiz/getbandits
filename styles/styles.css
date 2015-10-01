@@ -866,6 +866,7 @@ figure.effect-lexi:hover {
     /*stroke-dashoffset: 1000;*/
     -webkit-animation: dash 9s linear alternate infinite;
     animation: dash 9s linear alternate infinite;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
 }
 
