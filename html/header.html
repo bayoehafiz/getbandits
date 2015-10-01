@@ -75,17 +75,6 @@ loadCSS("styles/demotitleffect.css");
     top: 0;
 }
 
-.se-pre-con {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999999;
-    background: url(images/Preloader.svg) center no-repeat #fff;
-    background-color: #000
-}
-
 .alert {
     padding: 15px;
     margin-bottom: 20px;
@@ -156,7 +145,6 @@ input[type=number]::-webkit-outer-spin-button {
 <script type="text/javascript">
 $(window).load(function() {
     // Page preloader
-    //$(".se-pre-con").fadeOut(500);
     setTimeout(function () {
       $(".preloader_svg").fadeOut(500);
     }, 10000);
