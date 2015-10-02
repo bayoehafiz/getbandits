@@ -1,4 +1,6 @@
 $(function() {
+    // remove lick for mobile
+    //$('#slick-mobile').remove();
 
     // Generate View Cart button (hidden by default)
     $('<button id="view-cart-link" class="btn view-cart-link button--rayen" data-text="VIEW CART" href="#cart" style="display:none;z-index:999999;">VIEW CART</button>').insertAfter('div[data-remodal-id="pre-order"]');
@@ -26,7 +28,7 @@ $(function() {
         onLeave: function(index, nextIndex, direction) {
             var leavingSection = $(this);
 
-          
+
 
             if (index == 2 && direction == 'up') {
                 $('.btn-order-fixed button.btn-order').show();
@@ -47,23 +49,70 @@ $(function() {
         afterLoad: function(anchorLink, index) {
             var loadedSection = $(this);
 
+            /*if (index == 2) {
+                index0.addClass('left');
+            };*/
+
             if (index == 3) {
                 $('.btn-order-fixed button.btn-order').hide();
                 $('.btn-order-fixed button.btn-contact-us').show();
             };
+
+
         }
     });
+
 
     $('.logo').click(function() {
         $.fn.fullpage.moveTo(1);
     });
 
-    $('.slide-content-bandits').slick({
+    // SLICK.JS PLUGIN
+    /*$('.slide-content-bandits').slick({
         autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
         dotsClass: 'slick-dots',
-    });
+    });*/
+
+    /*var index0 = $('.slide-content-bandits li[data-slick-index="0"] h2,.slide-content-bandits li[data-slick-index="0"] p');
+    var index1 = $('.slide-content-bandits li[data-slick-index="1"] h2,.slide-content-bandits li[data-slick-index="1"] p');
+    var index2 = $('.slide-content-bandits li[data-slick-index="2"] h2,.slide-content-bandits li[data-slick-index="2"] p');
+    var index3 = $('.slide-content-bandits li[data-slick-index="3"] h2,.slide-content-bandits li[data-slick-index="3"] p');
+
+    $('.slide-content-bandits').on('afterChange', function(e, slick, currentSlide, nextSlide) {
+
+        console.log('current > ' + currentSlide);
+
+        if (currentSlide == 0) {
+            index0.removeClass('left');
+            index1.removeClass('right');
+            index2.removeClass('left');
+            index3.removeClass('right');
+            index0.addClass('left');
+        } else if (currentSlide == 1) {
+            index0.removeClass('left');
+            index1.removeClass('right');
+            index2.removeClass('left');
+            index3.removeClass('right');
+            index1.addClass('right');
+        } else if (currentSlide == 2) {
+            index0.removeClass('left');
+            index1.removeClass('right');
+            index2.removeClass('left');
+            index3.removeClass('right');
+            index2.addClass('left');
+        } else if (currentSlide == 3) {
+            index0.removeClass('left');
+            index2.removeClass('left');
+            index1.removeClass('right');
+            index3.removeClass('right');
+            index3.addClass('right');
+        };
+
+        e.preventDefault();
+    });*/
+
 
     // Initiate qty spinner
     (function($) {

@@ -8,3 +8,23 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+var carousel = $('#Carousel').glide({
+    type: 'carousel',
+    startAt: 1,
+    autoplay: 4000,
+    afterTransition: function(i, el) {
+    	$('.slide-content-bandits h2').removeClass('left');
+       	$('.slide-content-bandits h2').removeClass('right');
+
+       	if (i == 1 | i == 3) {
+       		console.log('left');
+       		$('.slide-content-bandits h2.' + i).addClass('left');
+       	} else if (i == 2 | i == 4) {
+       		console.log('right');
+       		$('.slide-content-bandits h2.' + i).addClass('right');
+       	}
+ 
+    }
+});
+</script>

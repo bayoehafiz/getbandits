@@ -1,4 +1,8 @@
 @media screen and (min-width: 768px) {
+    /*.slide-content-bandits h2,
+    .slide-content-bandits p {
+        opacity: 0
+    }*/
     .social .button-wrap{
         width: 400px;
         margin-left: auto;
@@ -95,6 +99,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    /*.slide-content-bandits h2,
+    .slide-content-bandits p {
+        opacity: 1
+    }*/
     .preloader_svg svg{
         width: 60%;
     }
