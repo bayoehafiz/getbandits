@@ -13,7 +13,6 @@ body {
 
 .box {
 	color: #fff;
-	font-size: 3vw;
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +26,7 @@ body {
 .module--horizontal .box {
 	width: 100%;
 	height: 320px;
-	padding: 0 250px;
+	padding: 0 10%;
 }
 
 .module--vertical {

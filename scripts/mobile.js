@@ -64,6 +64,14 @@ $(function() {
                 $('.btn-order-fixed button.btn-order').show();
                 $('.btn-order-fixed button.btn-contact-us').hide();
             }
+        },
+        afterLoad: function(anchorLink, index) {
+            var loadedSection = $(this);
+
+            if (index == 2) {
+                $('.slide-content-bandits h2.1 , .slide-content-bandits p.1').addClass('left');
+            };
+
         }
     });
 
@@ -71,12 +79,6 @@ $(function() {
         $.fn.fullpage.moveTo(1);
     });
 
-    $('.slide-content-bandits').slick({
-        autoplay: true,
-        autoplaySpeed: 3000,
-        dots: true,
-        dotsClass: 'slick-dots'
-    });
 
     // generate session reset btn if on local
     function generateSubmit(host) {

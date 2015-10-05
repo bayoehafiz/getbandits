@@ -231,6 +231,7 @@ h1#title_section0 span {
     margin: 1em 0!important;
     letter-spacing: 12px;
     line-height: 1.5;
+    opacity: 0;
 }
 
 .slide-content-bandits p {
@@ -238,18 +239,19 @@ h1#title_section0 span {
     font-size: 15px!important;
     line-height: 1.7;
     letter-spacing: 0.3px;
+     opacity: 0;
 }
 
 .slide-content-bandits p.left,
 .slide-content-bandits p.right{
-    -webkit-animation-delay:0.1s;
-    animation-delay:0.1s;
+    -webkit-animation-delay:0.3s;
+    animation-delay:0.3s;
 }
 
 .slide-content-bandits h2.left,
 .slide-content-bandits p.left{
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-name: content_slide_in_left;
@@ -258,8 +260,8 @@ h1#title_section0 span {
 
 .slide-content-bandits h2.right,
 .slide-content-bandits p.right{
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-name: content_slide_in_right;

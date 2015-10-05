@@ -49,9 +49,9 @@ $(function() {
         afterLoad: function(anchorLink, index) {
             var loadedSection = $(this);
 
-            /*if (index == 2) {
-                index0.addClass('left');
-            };*/
+            if (index == 2) {
+                $('.slide-content-bandits h2.1 , .slide-content-bandits p.1').addClass('left');
+            };
 
             if (index == 3) {
                 $('.btn-order-fixed button.btn-order').hide();
