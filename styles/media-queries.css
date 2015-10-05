@@ -99,9 +99,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .glide__wrapper{
-        overflow: visible!important;
-    }
     .module--horizontal .box{
         height: 100%!important;
         margin: 0
