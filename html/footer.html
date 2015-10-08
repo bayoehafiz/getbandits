@@ -26,4 +26,13 @@ var carousel = $('#Carousel').glide({
  
     }
 });
+
+$(document).ready(function () {
+	if ($(window).width() < 768) {
+		$('.glide--carousel .glide__slide:nth-child(4) div.content-bandits:nth-child(1)').insertAfter('.glide--carousel .glide__slide:nth-child(4) div.content-bandits:nth-child(2)');
+    	$('.glide--carousel .glide__slide:nth-child(6) div.content-bandits:nth-child(1)').insertAfter('.glide--carousel .glide__slide:nth-child(6) div.content-bandits:nth-child(2)');
+	}
+
+
+});
 </script>
