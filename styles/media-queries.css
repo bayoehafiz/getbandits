@@ -182,11 +182,10 @@
     }
     .bandits_added {
         display: inline-block;
-        width: 35px;
+        width: 100%;
         font-size: 9px;
         position: relative;
-        top: 2px;
-        left: 10px;
+        top: 8px;
     }
     #currency_separate {
         display: block;
@@ -205,7 +204,7 @@
     }
     #modal-qty-white,
     #modal-qty-black {
-        font-size: 20px;
+        font-size: 22px;
     }
     .dialog__content {
         height: 100%;
@@ -409,7 +408,7 @@
         margin-right: auto!important;
         margin-left: auto!important;
         background: transparent!important;
-        width: 90%!important;
+        width: 100%!important;
         border: 2px solid #000;
     }
     .grid figure img {
@@ -442,6 +441,7 @@
     #btn-plus-black {
         width: 20px;
         text-align: center;
+        font-size: 25px;
     }
     #btn-min-white,
     #btn-min-black {
@@ -898,7 +898,7 @@
         font-size: 12px!important;
     }
     .grid figure p span.add-to-cart {
-        font-size: 7px!important
+        font-size: 9px!important
     }
     #section2 h3 {
         font-size: 15px;
