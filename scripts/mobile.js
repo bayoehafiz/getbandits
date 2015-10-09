@@ -79,7 +79,6 @@ $(function() {
         $.fn.fullpage.moveTo(1);
     });
 
-
     // generate session reset btn if on local
     function generateSubmit(host) {
         if ((host == 'localhost') || (host == '10.0.1.2') || (host == '10.0.1.4')) {

@@ -17,6 +17,15 @@ $(function() {
     $('.side').css({
         'height': $_window.height() / 2
     });
+
+    var heightGlideBullets = $(window).height() * (21 / 100),
+        heightGlideBulletsResult = $(window).height() - heightGlideBullets;
+    $('.glide--horizontal .glide__bullets').css({
+        'position': 'fixed',
+        'bottom': -heightGlideBulletsResult,
+    });
+
+
     // Initiate FullPage plugin
     $('#fullpage').fullpage({
         menu: '#menu',

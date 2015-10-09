@@ -99,12 +99,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    .glide__wrapper{
-        overflow: visible!important;
-    }
     .module--horizontal .box{
         height: 100%!important;
-        margin: 0
+        margin: 0;
+        padding: 0 5%!important;
     }
     .glide__bullets{
         position: relative!important;
@@ -578,6 +576,9 @@
 }
 
 @media screen and (max-width: 992px) {
+    .module--horizontal .box {
+        padding: 0 10%;
+    }
     #section0 .bg-slide1 {
         background-size: 1300px
     }
