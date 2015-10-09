@@ -108,15 +108,15 @@ $(function() {
     }
 
     // Currency section +++++++++++++++
-    fx.base = "USD";
+    fx.base = "SGD";
     fx.rates = {
-        "IDR": 14000,
-        "USD": 1
+        "IDR": 10000,
+        "SGD": 1
     }
 
     // CountUp.js plugin function
     function countMe(target, sym, value) {
-        if (sym == 'USD') {
+        if (sym == 'SGD') {
             var options = {  
                 useEasing: true,
                   useGrouping: true,
@@ -205,20 +205,20 @@ $(function() {
 
     // Reading session on DOM
     if ($.jStorage.get('cur') == undefined) {
-        setCurrency('USD', 22);
+        setCurrency('SGD', 28);
     } else {
-        if ($.jStorage.get('cur') == 'USD') {
-            setCurrency('USD', 22);
+        if ($.jStorage.get('cur') == 'SGD') {
+            setCurrency('SGD', 28);
         } else if ($.jStorage.get('cur') == 'IDR') {
-            var val = fx.convert(22, {
-                from: "USD",
+            var val = fx.convert(28, {
+                from: "SGD",
                 to: "IDR"
             });
             setCurrency('IDR', val);
         }
         // adjusting checked radio button
         var sessCur = $.jStorage.get('cur');
-        if (sessCur == 'USD') {
+        if (sessCur == 'SGD') {
             $('#radio1').prop('checked', true);
         } else {
             $('#radio2').prop('checked', true);
@@ -230,12 +230,12 @@ $(function() {
     $("input:radio[name=currency]").click(function() {
             var cur = $(this).val();
             var conv, sym;
-            if (cur == 'USD') {
-                conv = 22;
-                sym = 'USD';
+            if (cur == 'SGD') {
+                conv = 28;
+                sym = 'SGD';
             } else {
-                conv = fx.convert(22, {
-                    from: "USD",
+                conv = fx.convert(28, {
+                    from: "SGD",
                     to: "IDR"
                 });
                 sym = 'IDR';
@@ -352,11 +352,11 @@ $(function() {
 
         // begin the currency converter
         var cur = getCurrencyValue();
-        if (cur == 'USD') {
-            setCurrency(cur, 22);
+        if (cur == 'SGD') {
+            setCurrency(cur, 28);
         } else if (cur == 'IDR') {
-            var val = fx.convert(22, {
-                from: "USD",
+            var val = fx.convert(28, {
+                from: "SGD",
                 to: "IDR"
             });
             setCurrency(cur, val);
@@ -381,7 +381,7 @@ $(function() {
             if (aw > 0) {
                 log('Adding ' + aw + ' white items into cart...');
                 $('#white-list').show();
-                wtot = aw * 22;
+                wtot = aw * 28;
                 $('#white-item').val(aw);
                 $('#white-total').text(wtot);
             }
@@ -389,7 +389,7 @@ $(function() {
             if (ab > 0) {
                 log('Adding ' + ab + ' black items into cart...');
                 $('#black-list').show();
-                btot = ab * 22;
+                btot = ab * 28;
                 $('#black-item').val(ab);
                 $('#black-total').text(btot);
             }
