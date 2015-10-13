@@ -95,7 +95,7 @@ $(function() {
             var formattedMoney = (val).formatMoney(2, '.', ',');
         } else if (sym == 'IDR') {
             var prefix = 'Rp ';
-            var fSize = '1.5';
+            var fSize = '1.2';
             var formattedMoney = (val).formatMoney(0, ',', '.');
         }
         target.html('<span style="font-size:' + fSize + 'em">' + prefix + formattedMoney + '</span>');
