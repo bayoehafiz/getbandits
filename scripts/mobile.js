@@ -1,39 +1,4 @@
 $(function() {
-    // Validation Function
-    /*$('#form-contact-us-mobile').validate({
-        rules: {
-            name: {
-                required: true
-            },
-            email: {
-                required: true
-            },
-            city: {
-                required: true
-            }
-        },
-        messages: {
-            name: {
-                required: "What's you name?"
-            },
-            email: {
-                required: "Fill in your email.."
-            },
-            city: {
-                required: "Where are you?"
-            }
-        },
-        errorPlacement: function(error, element) {
-            error.appendTo(element.parent().prev());
-        },
-        submitHandler: function(form) {
-            $(':mobile-pagecontainer').pagecontainer('change', '#success', {
-                reload: false
-            });
-            return false;
-        }
-    });*/
-
 
     $_window = $(window);
     $_height = $_window.height();
@@ -81,11 +46,7 @@ $(function() {
 
     // generate session reset btn if on local
     function generateSubmit(host) {
-        if ((host == 'localhost') || (host == '10.0.1.2') || (host == '10.0.1.4')) {
-            $('.cd-cart-total').html('<div class="btn-group btn-group-lg" style="width:100%;text-align:center;cursor:pointer;"><button class="btn btn-success" id="btn-page-reload"><i class="fa fa-refresh"></i></button><button class="btn btn-danger" id="btn-flush-session"><i class="fa fa-eye-slash"></i></button></div>');
-        } else {
-            $('.cd-cart-total').html('<button type="submit" class="checkout-btn">CHECKOUT</button>');
-        }
+        $('.cd-cart-total').html('<button type="submit" class="checkout-btn">CHECKOUT</button>');
     }
 
     // generate popup on mobile
@@ -114,30 +75,30 @@ $(function() {
         "SGD": 1
     }
 
-    // CountUp.js plugin function
-    function countMe(target, sym, value) {
+    Number.prototype.formatMoney = function(c, d, t) {
+        var n = this,
+            c = isNaN(c = Math.abs(c)) ? 2 : c,
+            d = d == undefined ? "." : d,
+            t = t == undefined ? "," : t,
+            s = n < 0 ? "-" : "",
+            i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+            j = (j = i.length) > 3 ? j % 3 : 0;
+        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+    };
+
+    function countMe(target, sym, value) { // Special mobile fn
+        var target = $('#' + target);
+        var val = parseInt(value);
         if (sym == 'SGD') {
-            var options = {  
-                useEasing: true,
-                  useGrouping: true,
-                  separator: ',',
-                  decimal: '.',
-                prefix: '$'
-            };
-            var endValue = parseInt(value);
-            var counter = new CountUp(target, 0, endValue, 2, 0.5, options);
+            var prefix = '$ ';
+            var fSize = '2';
+            var formattedMoney = (val).formatMoney(2, '.', ',');
         } else if (sym == 'IDR') {
-            var options = {  
-                useEasing: true,
-                  useGrouping: true,
-                  separator: '.',
-                  decimal: ',',
-                prefix: 'Rp '
-            };
-            var endValue = parseInt(value);
-            var counter = new CountUp(target, 0, endValue, 0, 0.5, options);
+            var prefix = 'Rp ';
+            var fSize = '1.5';
+            var formattedMoney = (val).formatMoney(0, ',', '.');
         }
-        counter.start();
+        target.html('<span style="font-size:' + fSize + 'em">' + prefix + formattedMoney + '</span>');
     }
 
     function getCurrencyValue() {
@@ -348,7 +309,7 @@ $(function() {
 
         // Generate button based on environment
         var env = window.location.host;
-        generateSubmit(env);
+        //generateSubmit(env);
 
         // begin the currency converter
         var cur = getCurrencyValue();

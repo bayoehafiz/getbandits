@@ -200,9 +200,8 @@ $(function() {
         });
         // Display the log (development mode ONLY!)
         if (window.location.host == 'localhost') {
-            bar.show();
+            //bar.show();
         }
-        //console.log(msg);
     }
 
     // Init Reset
@@ -247,10 +246,9 @@ $(function() {
                   useGrouping: true,
                   separator: ',',
                   decimal: '.',
-                prefix: '$'
+                prefix: '$ '
             };
-            var endValue = parseInt(value);
-            var counter = new CountUp(target, 0, endValue, 2, 0.5, options);
+            var dec = 2;
         } else if (sym == 'IDR') {
             var options = {  
                 useEasing: true,
@@ -259,9 +257,10 @@ $(function() {
                   decimal: ',',
                 prefix: 'Rp '
             };
-            var endValue = parseInt(value);
-            var counter = new CountUp(target, 0, endValue, 0, 0.5, options);
+            var dec = 0;
         }
+
+        var counter = new CountUp(target, 0, parseInt(value), dec, 0.5, options);
         counter.start();
     }
 
