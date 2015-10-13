@@ -501,7 +501,13 @@ ul.slide-content-bandits .content-bandits {
 
 }
 #cd-shadow-layer {
-    background: rgba(43, 46, 56, 0.9)!important;
+    background: rgba(0, 0, 0, 0.6)!important;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    opacity: 0.95;
 }
 
 /* ----- NAV DOTS STYLES ---- */

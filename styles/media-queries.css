@@ -670,7 +670,7 @@
     }
     .grid {
         margin: 0!important;
-        max-width: 710px!important;
+        max-width: 90%!important;
         margin-left: auto!important;
         margin-right: auto!important;
     }

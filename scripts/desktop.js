@@ -193,7 +193,7 @@ $(function() {
 
     // Generate log
     function log(msg) {
-        /*var bar = new $.peekABar({
+        var bar = new $.peekABar({
             autohide: false,
             closeOnClick: true,
             html: msg
@@ -201,8 +201,8 @@ $(function() {
         // Display the log (development mode ONLY!)
         if (window.location.host == 'localhost') {
             bar.show();
-        }*/
-        console.log(msg);
+        }
+        //console.log(msg);
     }
 
     // Init Reset
