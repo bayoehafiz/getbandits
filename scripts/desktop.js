@@ -180,17 +180,6 @@ $(function() {
             }
         });
 
-    $('#form-cart')
-        .formValidation({
-            framework: 'bootstrap'
-        })
-        .on('success.field.fv', function(e, data) {
-            if (data.fv.getInvalidFields().length > 0) { // There is invalid field
-                data.fv.disableSubmitButtons(true);
-            }
-        });
-
-
     // Generate log
     function log(msg) {
         var bar = new $.peekABar({
@@ -201,6 +190,7 @@ $(function() {
         // Display the log (development mode ONLY!)
         if (window.location.host == 'localhost') {
             //bar.show();
+            console.log(msg);
         }
     }
 
@@ -767,43 +757,23 @@ $(function() {
         return false;
     });
 
-    // Send email handler
+    // Checkout handler
     $('#btn-checkout').click(function() {
-        var data = {
-            name: $("#cart-name").val(),
-            email: $("#cart-email").val(),
-            city: $("#cart-city").val(),
-            white: $("#white-item").val(),
-            black: $("#black-item").val()
-        };
-        $.ajax({
-                type: "POST",
-                url: "pre_order.php",
-                data: data
-            })
-            .done(function(msg) {
-                log(msg);
-                $.ajax({
-                        type: "POST",
-                        url: "pre_order_admin.php",
-                        data: data
-                    })
-                    .done(function(msg2) {
-                        log(msg2);
-                        $.ajax({
-                                type: "POST",
-                                url: "insert.php",
-                                data: data
-                            })
-                            .done(function(msg3) {
-                                log(msg3);
-                            });
-                    });
+        var wh = $("#white-item").val(),
+            bl = $("#black-item").val();
+
+        var link = 'http://getbandits-com.myshopify.com/cart/4181438916:' + wh + ',4181438980:' + bl;
+
+        // fetch remote url
+        /*$('div#checkout-modal').fadeOut('slow', function() {
+            $('div#checkout-modal').load(link, function() {
+                $('#cd-cart-trigger').trigger('click');
+                $('div#checkout-modal').fadeIn('slow');
             });
+        });*/
+        window.location.href = link;
 
-        $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
-        $('#btn-checkout').attr('data-text', 'THANK YOU FOR YOUR ORDER');
-
+        //$('#checkout-modal').addClass('dialog--open');
         return false;
     });
 

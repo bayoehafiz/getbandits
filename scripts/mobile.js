@@ -69,6 +69,7 @@ $(function() {
         // Display the log (development mode ONLY!)
         if (window.location.host == 'localhost') {
             //bar.show(msg);
+            console.log(msg);
         }
     }
 
@@ -668,46 +669,13 @@ $(function() {
         return false;
     });
 
-    // Preorder checkout submit button
-    var m = Ladda.create(document.querySelector('#btn-checkout'));
     // Send email handler
     $('#btn-checkout').click(function() {
-        var data = {
-            name: $("#cart-name").val(),
-            email: $("#cart-email").val(),
-            city: $("#cart-city").val(),
-            white: $("#white-item").val(),
-            black: $("#black-item").val()
-        };
-        m.start();
-        /*$.ajax({
-                type: "POST",
-                url: "pre_order.php",
-                data: data
-            })
-            .done(function(msg) {
-                log(msg);
-                $.ajax({
-                        type: "POST",
-                        url: "pre_order_admin.php",
-                        data: data
-                    })
-                    .done(function(msg2) {
-                        log(msg2);
-                        $.ajax({
-                                type: "POST",
-                                url: "insert.php",
-                                data: data
-                            })
-                            .done(function(msg3) {
-                                log(msg3);
-                            });
-                    });
-            });*/
-        m.stop();
+        var wh = $("#white-item").val(),
+            bl = $("#black-item").val();
 
-        $('#btn-checkout > span').html('THANK YOU FOR YOUR ORDER');
-        $('#btn-checkout').attr('data-text', 'THANK YOU FOR YOUR ORDER');
+        // redirect to shopify
+        window.location = 'http://getbandits-com.myshopify.com/cart/4181438916:' + wh + ',4181438980:' + bl;
 
         return false;
     });

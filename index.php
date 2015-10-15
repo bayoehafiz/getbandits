@@ -22,6 +22,10 @@
     <?php include 'html/modal-cart.html';?>
     <!-- EOF Cart DIV -->
 
+    <!-- Checkout DIV -->
+    <?php include 'html/modal-checkout.html';?>
+    <!-- EOF Checkout DIV -->
+
     <!-- Footer -->
     <?php include 'html/footer.html';?>
     <!-- EOF Footer -->
