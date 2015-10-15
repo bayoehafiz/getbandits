@@ -40,6 +40,10 @@ $(function() {
         }
     });
 
+    // generate order modal's text
+    $('span#white-add, span#black-add').html('<b>TAP TO ADD</b>');
+
+    // click on logo
     $('.logo').click(function() {
         $.fn.fullpage.moveTo(1);
     });
@@ -127,6 +131,7 @@ $(function() {
         // save to session
         $.jStorage.set('cur', sym);
     }
+    // End of currency section +++++++++++++++
 
 
     // Reading Cart Items session
@@ -189,24 +194,25 @@ $(function() {
 
     // Currency radio button
     $("input:radio[name=currency]").click(function() {
-            var cur = $(this).val();
-            var conv, sym;
-            if (cur == 'SGD') {
-                conv = 28;
-                sym = 'SGD';
-            } else {
-                conv = fx.convert(28, {
-                    from: "SGD",
-                    to: "IDR"
-                });
-                sym = 'IDR';
-            }
-            log('Changing currency into ' + sym + '...');
-            // Apply changes
-            setCurrency(sym, conv);
-        })
-        // EOF Currency section ++++++++++++++++
-        // Init Reset
+        var cur = $(this).val();
+        var conv, sym;
+        if (cur == 'SGD') {
+            conv = 28;
+            sym = 'SGD';
+        } else {
+            conv = fx.convert(28, {
+                from: "SGD",
+                to: "IDR"
+            });
+            sym = 'IDR';
+        }
+        log('Changing currency into ' + sym + '...');
+        // Apply changes
+        setCurrency(sym, conv);
+    });
+
+
+    // Init Reset
     function resetInit() {
         $('#white-item').val(0);
         $('#white-amount').val(0);
@@ -471,6 +477,9 @@ $(function() {
         setSession();
         cartCounter();
     });
+    $('div#image-item-white').on('tap', function() {
+        console.log('WHITE TAPPED!');
+    })
     // Solid-black initial add
     $('#black-add').click(function() {
         var b = 1;
@@ -481,6 +490,9 @@ $(function() {
         setSession();
         cartCounter();
     });
+    $('div#image-item-black').on('tap', function() {
+        console.log('BLACK TAPPED!');
+    })
 
     // Change item qty on modal
     //White
