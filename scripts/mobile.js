@@ -91,7 +91,7 @@ $(function() {
         var val = parseInt(value);
         if (sym == 'SGD') {
             var prefix = '$ ';
-            var fSize = '2';
+            var fSize = '1.5';
             var formattedMoney = (val).formatMoney(2, '.', ',');
         } else if (sym == 'IDR') {
             var prefix = 'Rp ';
