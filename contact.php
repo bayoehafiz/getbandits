@@ -2,7 +2,7 @@
 if($_POST){
     require 'mailer/Mandrill.php';
     try {
-        $mandrill = new Mandrill('5O8bMd9RhEd7hrcSNqFfFg');
+        $mandrill = new Mandrill('62863033febcc47fcda78b63ec0dcab3-us9');
         $message = array(
             'html' => $_POST['message'],
             'subject' => 'New message from GetBandits.com visitor',
@@ -10,7 +10,8 @@ if($_POST){
             'from_name' => $_POST['name'],
             'to' => array(
                 array(
-                    'email' => 'hey@getbandits.com',
+                    // 'email' => 'hey@getbandits.com',
+                    'email' => 'bayu@colorblindlabs.com',
                     'name' => 'Bandits Team',
                     'type' => 'to'
                 )

@@ -15,15 +15,15 @@
     <!-- EOF Body section -->
 
     <!-- Pre Order Modal -->
-    <?php include 'html/modal-order.html';?>
+    <!-- <?php include 'html/modal-order.html';?> -->
     <!-- EOF Pre Order Modal -->
 
     <!-- Cart DIV -->
-    <?php include 'html/modal-cart.html';?>
+    <!-- <?php include 'html/modal-cart.html';?> -->
     <!-- EOF Cart DIV -->
 
     <!-- Checkout DIV -->
-    <?php include 'html/modal-checkout.html';?>
+    <!-- <?php include 'html/modal-checkout.html';?> -->
     <!-- EOF Checkout DIV -->
 
     <!-- Footer -->

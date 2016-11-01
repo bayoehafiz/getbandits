@@ -461,12 +461,13 @@ $(function() {
     });
     // Pre order button handler
     $('.btn-order, .link-order').click(function() {
-        var cart = $('#cd-cart');
-        if (cart.hasClass('speed-in')) {
-            $('#cd-cart').removeClass('speed-in');
-        }
-        cartCounter();
-        modal.open();
+        // var cart = $('#cd-cart');
+        // if (cart.hasClass('speed-in')) {
+        //     $('#cd-cart').removeClass('speed-in');
+        // }
+        // cartCounter();
+        // modal.open();
+        window.location = "https://www.tokopedia.com/bandits";
     });
     // Pure-white initial add
     $('#white-add').click(function() {
@@ -479,9 +480,9 @@ $(function() {
         cartCounter();
     });
     $('div#image-item-white').on('tap', function() {
-        console.log('WHITE TAPPED!');
-    })
-    // Solid-black initial add
+            console.log('WHITE TAPPED!');
+        })
+        // Solid-black initial add
     $('#black-add').click(function() {
         var b = 1;
         $('#black-amount').val(b);

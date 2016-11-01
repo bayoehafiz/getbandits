@@ -540,7 +540,8 @@ $(function() {
 
     // Pre order button handler
     $('.btn-order, .link-order').click(function() {
-        modal.open();
+        // modal.open();
+        window.location = "https://www.tokopedia.com/bandits";
     });
 
     // Pure-white initial add
